@@ -1,6 +1,1 @@
-DirectoryIndex index.html
-
-<FilesMatch "^(index.html)$">
- Order allow,deny
- Allow from all
-</FilesMatch>
+DirectoryIndex motor.html
