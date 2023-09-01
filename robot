@@ -6,4 +6,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://ikanjambi.unja.ac.id/gallery/sitemap.xml
+Sitemap: https://sikapmu.polimedia.ac.id/assets/sitemap.xml
