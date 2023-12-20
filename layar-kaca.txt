@@ -49,7 +49,8 @@
 <li><a title="Slot Dana" href="https://eabsensi-rsud.lampungutarakab.go.id/css/slot-dana/" rel="dofollow">Slot Dana</a></li>
 <li><a title="Slot88" href="https://prokompim.wonosobokab.go.id/css/-/slot88/" rel="dofollow">Slot88</a></li>
 <li><a title="Slot Pulsa" href="https://inovasi.sragenkab.go.id/assets/files/slot-pulsa/" rel="dofollow">Slot Pulsa</a></li>
-
+<li><a title="Slot Pulsa" href="https://sikeplu.lampungutarakab.go.id/assets/slot-pulsa/" rel="dofollow">Slot Pulsa</a></li>
+<li><a title="Slot Dana" href="https://dana.stttelkom.ac.id/" rel="dofollow">Slot Dana</a></li>
 
 
 
