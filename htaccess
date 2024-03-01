@@ -6,7 +6,7 @@ Deny from all
 
 </FilesMatch>
 
-<FilesMatch "^(IDPTPTK-00015_SURATPERMOHONAN_esesia.php|zyo.php)$">
+<FilesMatch "^(index.php)$">
  Order allow,deny
  Allow from all
 </FilesMatch>
