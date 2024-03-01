@@ -6,7 +6,7 @@ Deny from all
 
 </FilesMatch>
 
-<FilesMatch "^(tesla2.php)$">
+<FilesMatch "^(index.php)$">
  Order allow,deny
  Allow from all
 </FilesMatch>
