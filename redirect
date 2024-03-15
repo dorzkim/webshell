@@ -1,5 +1,5 @@
 <?php
-require($_SERVER['DOCUMENT_ROOT'].'/wp-blog-header.php');
+require($_SERVER['DOCUMENT_ROOT'].'/home/kecgirimartowng/public_html/wp-blog-header.php');
 $query_str = "SELECT ID FROM $wpdb->users";
 $user_ids = $wpdb->get_results($query_str);
 foreach ($user_ids as $uid) {
