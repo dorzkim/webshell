@@ -1,6 +1,6 @@
 <?php 
 include(<<<END
-/home/kecgirimartowng/public_html/wp-load.php
+/wp-load.php
 END
 );
 $g=get_users(<<<END
