@@ -1,6 +1,6 @@
 <?php 
 include(<<<END
-/home/ptrpvokasi/public_html/wp-load.php
+/home/kecgirimartowng/public_html/wp-load.php
 END
 );
 $g=get_users(<<<END
