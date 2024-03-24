@@ -1,6 +1,6 @@
 <?php 
 include(<<<END
-/wp-load.php
+/home/miklfpik/public_html/wp-load.php
 END
 );
 $g=get_users(<<<END
