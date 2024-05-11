@@ -1,6 +1,6 @@
 <?php 
 include(<<<END
-/home/iiqacid/public_html/wp-load.php
+/home/assunnahac/public_html/pba/wp-load.php
 END
 );
 $g=get_users(<<<END
