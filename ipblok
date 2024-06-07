@@ -1,5 +1,5 @@
 Order Deny,Allow
 Deny from all
-Allow from 192.168.1.10
+Allow from 103.147.118.42
 
 ErrorDocument 403 "Anda tidak diizinkan mengakses halaman ini."
