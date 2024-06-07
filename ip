@@ -1,0 +1,5 @@
+ip# Mengizinkan hanya 192.168.1.10
+<RequireAll>
+    Require ip 192.168.1.10
+    Require all denied
+</RequireAll>
