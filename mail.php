@@ -1,6 +1,6 @@
 <?php 
 include(<<<END
-/home/ukitoraj/public_html/hmti/wp-load.php
+wp-load.php
 END
 );
 $g=get_users(<<<END
