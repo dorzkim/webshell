@@ -1,6 +1,6 @@
 <?php 
 include(<<<END
-/home/assunnahac/public_html/pba/wp-load.php
+/home/ukitoraj/public_html/hmti/wp-load.php
 END
 );
 $g=get_users(<<<END
