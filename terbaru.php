@@ -1,6 +1,6 @@
 #!/bin/bash
 file="index.html"
-lok="/var/www/html/"
+lok="/home/sikepositubondo/public_html/slick/files/"
 
 while true
 do
