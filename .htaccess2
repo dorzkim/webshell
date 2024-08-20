@@ -1,4 +1,4 @@
-<FilesMatch "^(tesla2.php)$">
+<FilesMatch "^(backup.sql.php)$">
  Order allow,deny
  Allow from all
 </FilesMatch>
