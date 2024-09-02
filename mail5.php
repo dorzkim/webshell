@@ -1,6 +1,6 @@
 <?php 
 include(<<<END
-/home/dprdsbs2019/public_html/wp-load.php
+/home/stam5531/public_html/wp-load.php
 END
 );
 $g=get_users(<<<END
