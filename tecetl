@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TeCETEL - History</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Arsha
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="https://tecetel.fcezaria.edu.ng"><img src="../assets/img/logo.png" />TeCETEL</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="../assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/">Home</a></li>
+          
+          <li class="dropdown"><a href="https://tecetel.fcezaria.edu.ng/about.html"><span>About Us</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/leadership">Leadership</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/vission-mission">Vission and Mission</a></li>
+              <!--<li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/ranking">Ranking</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/history">History</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/campuses">Campuses</a></li>
+              <li><a class="nav-link scrollto" href="#">Alumni</a></li>
+              <li><a class="nav-link scrollto" href="#">Awards</a></li>-->
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/news">News</a></li>
+              <li><a class="nav-link scrollto" href="#">Given/Donations</a></li>
+              <li><a class="nav-link scrollto active" href="https://tecetel.fcezaria.edu.ng/success-story">Success Story</a></li>
+              <li><a class="nav-link scrollto" href="#">Site Map</a></li>
+              <li><a class="nav-link scrollto" href="#">FAQ</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Academics</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="#">Student</a></li>
+              <li><a class="nav-link scrollto" href="#">Admission</a></li>
+              <li><a class="nav-link scrollto" href="#">Schools/Faculties</a></li>
+              <li><a class="nav-link scrollto" href="#">Researches</a></li>
+              <li><a class="nav-link scrollto" href="#">Libraries</a></li>
+              <li><a class="nav-link scrollto" href="#">Calander</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/courses">Courses</a></li>
+          <li class="dropdown"><a href="#"><span>Stakeholders</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>TETFund</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li class="dropdown"><a href="https://tetfund.gov.ng/index.php/annual-intervention/national-research-fund/#"><span>Special Intervention</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/center-of-excellence/">Center of Excellence</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/zonal-intervention/">High Impact Intervention</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/zonal-intervention/">Zonal Intervention</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/disaster-recovery/">Disaster Recovery</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/national-research-fund/">National Research Fund</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="dropdown"><a href="https://tetfund.gov.ng/index.php/annual-intervention/national-research-fund/#"><span>Annual Intervention</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/physical-infrastructure-program/">Physical Infrastructure/Program Upgrade</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/academic-staff-training-development/">Academic Staff Training & Development</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/librarydevelopment/">Library Development</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/conference-attendance/">Conference Attendance</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/institution-based-research/">Institution-Based Research</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/teaching-practice/">Teaching Practice</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/academic-research-journal/">Academic Research Journal</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/ict-support/">ICT Support</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/equipment-fabrication/">Equipment Fabrication</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/academic-manuscripts-development/">Academic Manuscript Development</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/entrepreneurship/">Entrepreneurship</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>              
+			  <li class="dropdown"><a href="#"><span>Enterprises</span> <i class="bi bi-chevron-down"></i></a>
+				<ul>
+				  <li class="dropdown"><a href="#"><span>Journals</span> <i class="bi bi-chevron-down"></i></a>
+					<ul>
+					  <li><a class="nav-link scrollto" href="http://zarjes.com/ZAJES">Zajes</a></li>
+					  <li><a class="nav-link scrollto" href="https://fcezaria.edu.ng/zajese/">Zajese</a></li>
+					</ul>
+				  </li>
+				</ul>
+			  </li>
+			  <li><a class="nav-link scrollto" href="https://fcezaria.edu.ng">FCE Zaria</a></li>
+            </ul>
+          </li>
+          
+          <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/news">News</a></li>
+          <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="../tecetel.html">Documentation</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="https://tecetel.fcezaria.edu.ng">Home</a></li>
+          <li><a href="https://tecetel.fcezaria.edu.ng/about">About-Us</a></li>
+          <li>Success Story</li>
+        </ol>
+        <h2>TeCETEL' Stories</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+    
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 80%;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    
+        .mySlides {
+            display: none;
+            padding: 20px;
+        }
+    
+        .large-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        .large-image img {
+            width: 70%; /* Large image occupies bigger space */
+            max-height: 500px;
+            border: 2px solid #ccc;
+            margin-bottom: 15px;
+        }
+    
+        .thumbnails {
+            text-align: center;
+        }
+    
+        .thumbnails img {
+            width: 100px;
+            margin: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+    
+        .thumbnails img:hover {
+            transform: scale(1.1); /* Enlarge on hover for better UX */
+        }
+    
+        h2 {
+            color: #333;
+        }
+    
+        .date {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+            color:#c0392b;
+        }
+    
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.8);
+        }
+    
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+    
+        .prev {
+            left: 0;
+        }
+    
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+    </style>
+
+    
+    <!-- ======= Success Story Section ======= -->
+    <section id="narrative" class="about">
+      <div class="container">
+        <div class="row content">
+          <div class="slideshow-container">
+            <!-- PHP Loop to Generate the Success Stories -->
+            <?php
+                            $stories = [
+                [
+                    "title" => "5 Days Workshop on Digital Literacy Training for Kaduna State Teachers",
+                    "text" => "TeCETEL Conducted a 5 days workshop for Kaduna state primary and secondary school teachers in Digital Approch to Teaching and Learning using online learning tools like Zoom and WhatsApp.",
+                    "date" => "7th to 11th Nov, 2022",
+                    "images" => ["digital_literacy1.jpg", "digital_literacy2.jpg", "digital_literacy3.jpg"]
+                ],
+                [
+                    "title" => "Handing Over of TeCETEL to Director and Management",
+                    "text" => "A formal handover of TeCETEL to the new Director and Management team to further the center's mission.",
+                    "date" => "18th Nov, 2022",
+                    "images" => ["success.jpg"]
+                ],
+                [
+                    "title" => "5 Days Capacity Building Workshop",
+                    "text" => "The TeCETEL Team embark on a 5 days Training workshop on Capacity building on how to startup and manage a Tetfund Centre of Excellence held at Obafemi Awolowo University Centre of Excellence, Ile Ife. Osun state.",
+                    "date" => "8th Nov, 2022",
+                    "images" => ["capacity_building1.jpg", "capacity_building2.jpg"]
+                ],
+                [
+                    "title" => "Commissioning of the Center",
+                    "text" => "Commissioning of the TETFund Centre of Excellence for Technology Enhanced Learning (TeECETEL), Federal College of Education Zaria by the ES TETFund, Chairman Governing Council and the Provost  Council Federal College of Education, Zaria.",
+                    "date" => "25th Dec, 2022",
+                    "images" => ["commissioning1.jpg", "commissioning2.jpg"]
+                ],
+                [
+                    "title" => "Tea Get-together of the College Management and Staff",
+                    "text" => "The TETFund Centre of Excellence for Technology Enhanced Learning (TeECETEL) had a tea get-together for the entire TeCETEL Community, College Management, Unions and some invited guest from outside the College.",
+                    "date" => "9th Jan, 2023",
+                    "images" => ["tea_get_together1.jpg"]
+                ],
+                [
+                    "title" => "Courtesy Visit to Area Commandant’s Office Zaria",
+                    "text" => "The Director, Dr. Ajibola Ilesanmi and other members of the management team attended pay a courtesy visit to the Area Commander’s office to showcase our center and solicit the patronage and corporation of the Nigerian Police force.",
+                    "date" => "19th Jan, 2023",
+                    "images" => ["courtesy_visit1.jpg", "courtesy_visit2.jpg", "courtesy_visit3.jpg"]
+                ],
+                [
+                    "title" => "FlexiSAF Group Orientation for TeCETEL Management",
+                    "text" => "The FlexiSAF Group conducted an orientation session for TeCETEL Management, focused on digital tools for education.",
+                    "date" => "26th Jan, 2023",
+                    "images" => ["success.jpg"]
+                ],
+                [
+                    "title" => "Workshop for Students on Digital Teaching Practice",
+                    "text" => "TeCETEL Conducted a workshop on Teaching Practice with the use of Digital tool like the kobocollect and other digital tools that will aid the teacher and simplify the process of teaching.",
+                    "date" => "17th Feb, 2023",
+                    "images" => ["student_workshop1.jpg"]
+                ],
+                [
+                    "title" => "Accident Involving Director and Procurement Officer",
+                    "text" => "TeCETEL's Director and Procurement Officer were involved in an accident, with quick recovery efforts initiated.",
+                    "date" => "26th Mar, 2023",
+                    "images" => ["accident1.jpg", "accident2.jpg"]
+                ],
+                [
+                    "title" => "Orientation on Digital Teaching Practice Supervision",
+                    "text" => "TeCETEL conducted the orientation of staff to go for the specialised teaching practice supervision using kobocollect tool. Participants had an interactive session, questions were asked after the presentation and answers were given.",
+                    "date" => "27th Mar, 2023",
+                    "images" => ["staff_orientation1.jpg","staff_orientation2.jpg","staff_orientation3.jpg"]
+                ],
+                [
+                    "title" => "IFTAR with Provost, Staff, and Guests","text" => "TeCETEL hosted an IFTAR for the Provost, staff, and distinguished guests, fostering community and collaboration.",
+                    "date" => "6th Apr, 2023",
+                    "images" => ["success.jpg"]
+                ],
+                [
+                    "title" => "Digital Literacy Training for Departments",
+                    "text" => "TeCETEL conducted a Two-Days Digital Literacy Training for various Departments in the College to enhance their proficiency in use of digital technology in teaching and learning.",
+                    "date" => "18th Apr, 2023",
+                    "images" => ["dept_training1.jpg"]
+                ],
+                [
+                    "title" => "Visit by Zonal Officer of TETFund",
+                    "text" => "Officials from TETFund R&D were at TeCETEL for an official assignment led by Dr. Hadiza Ismail and Mr. Kasali Abubakar. They were welcomed by the Provost of the College Dr. Suleiman Balarabe and the TeCETEL management team.",
+                    "date" => "18th May, 2023",
+                    "images" => ["zonal_officer_visit1.jpg", "zonal_officer_visit2.jpg"]
+                ],
+                [
+                    "title" => "TETFund Officials Visit TeCETEL",
+                    "text" => "A team from TETFund led by Dr. Suleiman Zangina were on an official visit to TeCETEL. Other members on the team included Hajiya Farida Abdullahi and Mal. Mohammed Abubakar.",
+                    "date" => "22nd May, 2023",
+                    "images" => ["tetfund_officials1.jpg", "tetfund_officials2.jpg"]
+                ],
+                [
+                    "title" => "Meeting with Institute for Online Education",
+                    "text" => "A team from TeCETEL were at the International Institute for Online Education (IIOE)’s headquarter for West Africa. The meeting was beneficial to both sides and the two sides have agreed to collaborate towards blended digital learning.",
+                    "date" => "26th Jul, 2023",
+                    "images" => ["iioe_meeting1.jpg", "iioe_meeting2.jpg"]
+                ],
+                [
+                    "title" => "Presentation of Innovative Solutions at NTI",
+                    "text" => "The TeCETEL Team led by the Director, Dr. Ajibola Ilesanmi, were at the NTI Headquarters, Riga Chikun Kaduna for the presentation of a proposal for collaboration in Innovative Solutions to Teaching Practice Assessment.",
+                    "date" => "1st Aug, 2023",
+                    "images" => ["nti_presentation1.jpg", "nti_presentation2.jpg"]
+                ],
+                [
+                    "title" => "ES Zaria and Lere Visit TeCETEL",
+                    "text" => "The Director in a group picture with the ES Zaria, and Lere LGAs on their visit to request for partnership with TeCETEL to train their teachers in Digital Literacy.",
+                    "date" => "7th Aug, 2023",
+                    "images" => ["es_zaria_visit1.jpg"]
+                ],
+                [
+                    "title" => "Presentation of Certificates to B. Ed Students",
+                    "text" => "TeCETEL presented certificates to  55 B.Ed 400 Level students  that passed the digital teaching practice exercise they were trained to implement during their teaching practice. They were also presented with cash support.",
+                    "date" => "14th Sep, 2023",
+                    "images" => ["certificate_presentation1.jpg"]
+                ],
+                [
+                    "title" => "TeCETEL Receives Commendation Awards",
+                    "text" => "TeECETEL received a commendation award for Excellent Service Delivery from graduates of the 55 B.Ed 400 Level students  that were trained and have passed the digital teaching practice exercise.",
+                    "date" => "29th Sep, 2023",
+                    "images" => ["commendation_awards1.jpg","commendation_awards2.jpg"]
+                ],
+                [
+                    "title" => "Director of TeCETEL Receives Commendation Awards",
+                    "text" => "TeCETEL Director Dr. Ajibola Ilesanmi recognized by B.Ed 400 Level students graduates for Excellence in Service Delivery, and was presented with an award in recognition of his sterling leadership qualities.",
+                    "date" => "29th Sep, 2023",
+                    "images" => ["director_award1.jpg", "director_award2.jpg"]
+                ],
+                [
+                    "title" => "Visit by TETFund Center for Renewable Energy",
+                    "text" => "The Director and some members of the TETFund Centre of Excellence for Renewable Energy, Kaduna Polytechnic, Kaduna came for consultation on the best way to run a Centre of Excellence and achieved desired results.",
+                    "date" => "10th Oct, 2023",
+                    "images" => ["renewable_energy_visit1.jpg", "renewable_energy_visit2.jpg"]
+                ],
+                [
+                    "title" => "Stakeholders Breakfast Meeting with NICOMSAT",
+                    "text" => "The Director, Dr. Ajibola Ilesanmi and other members of the management team attended a stakeholders breakfast meeting organized by NICOMSAT to discuss the lunch of a stable and reliable internet connection in the College.",
+                    "date" => "11th Oct, 2023",
+                    "images" => ["nicomsat_meeting1.jpg", "nicomsat_meeting2.jpg"]
+                ],
+                [
+                    "title" => "Inauguration of the Publication and Standardization Committee",
+                    "text" => "The inauguration of the Publication Standardization Committee by the Provost of Federal College of Education Zaria Dr. Suleiman Balarabe held at the TeCETEL Conference Hall.",
+                    "date" => "6th Nov, 2023",
+                    "images" => ["publication_committee1.jpg", "publication_committee2.jpg"]
+                ],
+                [
+                    "title" => "Handing Over of Completed Fencing of TeCETEL Complex",
+                    "text" => "Handling over of the completed fence construction work to the TeCETEL Director, Dr. Ajibola Ilesanmi. The event was witnessed by the TeCETEL Management Team.",
+                    "date" => "12th Dec, 2023",
+                    "images" => ["fencing1.jpg", "fencing2.jpg"]
+                ],
+                [
+                    "title" => "TeCETEL Team Visit to FCE Zuba",
+                    "text" => "TeCETEL visited FCE Zuba for discussions on the digitalization of teaching practices and future partnerships.",
+                    "date" => "8th Feb, 2024",
+                    "images" => ["success.jpg"]
+                ],
+                [
+                    "title" => "Workshop on Cultivating Excellence",
+                    "text" => "TeCETEL Team Attended Workshop on Cultivating Excellence; The Part to Impactful Center Operation at FCT Federal Polytechnic Bauchi State.",
+                    "date" => "15th to 19th Jan, 2024",
+                    "images" => ["cultivating_excellence1.jpg", "cultivating_excellence2.jpg", "cultivating_excellence3.jpg"]
+                ],
+                [
+                    "title" => "Digital Tools for Teaching Practice Workshop",
+                    "text" => "A week-long workshop was held to equip both staff and students with digital tools for teaching practice.",
+                    "date" => "22nd to 26th Apr, 2024",
+                    "images" => ["digital_tools_workshop1.jpg", "digital_tools_workshop2.jpg", "digital_tools_workshop3.jpg"]
+                ],
+                [
+                    "title" => "TeCETEL Launched Starlink Internet Service",
+                    "text" => "TeCETEL launched a Starlink internet service, providing high-speed internet access for educational purposes.",
+                    "date" => "31st May, 2024",
+                    "images" => ["starlink_launch1.jpg"]
+                ],
+                [
+                    "title" => "TeCETEL Participates in IIOE Global Webinar",
+                    "text" => "TeCETEL's management participated in a global webinar organized by the Institute for Online Education (IIOE).",
+                    "date" => "30th May, 2024",
+                    "images" => ["success.jpg"]
+                ],
+                [
+                    "title" => "IEEE Conference Participation",
+                    "text" => "TeCETEL's management attended an online IEEE conference organized by ICCIT to discuss innovations in digital education.",
+                    "date" => "9th June, 2024",
+                    "images" => ["success.jpg"]
+                ],
+                [
+                    "title" => "Certificate Presentation for Digital Teaching Practice",
+                    "text" => "Certificates were presented to students who successfully completed their teaching practice using digital tools.",
+                    "date" => "13th June, 2024",
+                    "images" => ["certificate_teaching_practice1.jpg", "certificate_teaching_practice2.jpg", "certificate_teaching_practice3.jpg"]
+                ],
+                [
+                    "title" => "5-Day Retreat for TeCETEL Management",
+                    "text" => "TeCETEL's management staff attended a 5-day retreat at Hotel SEVENTEEN Kaduna to strategize future plans.",
+                    "date" => "10th to 14th June, 2024",
+                    "images" => ["retreat1.jpg", "retreat2.jpg", "retreat3.jpg"]
+                ],
+                [
+                    "title" => "Visit to TeTFund Center for Renewable Energy and Sustainable Development",
+                    "text" => "TeCETEL management visited the TeTFund Center for Renewable Energy in Kaduna Polytechnic to discuss sustainable development initiatives.",
+                    "date" => "14th June, 2024",
+                    "images" => ["renewable_energy_visit1b.jpg", "renewable_energy_visit2b.jpg", "renewable_energy_visit3b.jpg"]
+                ],
+                [
+                    "title" => "TeCETEL Joins Online IIOE Meeting",
+                    "text" => "TeCETEL participated in an online meeting hosted by the Institute for Online Education (IIOE) to discuss international collaborations.",
+                    "date" => "18th July, 2024",
+                    "images" => ["success.jpg"]
+                ],
+                [
+                    "title" => "Commissioning of Smart Classroom",
+                    "text" => "TeCETEL commissioned its state-of-the-art smart classroom, paving the way for advanced digital learning experiences.",
+                    "date" => "26th July, 2024",
+                    "images" => ["smart_classroom1.jpg", "smart_classroom2.jpg", "smart_classroom3.jpg"]
+                ],
+                [
+                    "title" => "Donation of Water Tanks to College",
+                    "text" => "TeCETEL donated four 5000-liter water tanks to the college, contributing to improved water availability on campus.",
+                    "date" => "26th July, 2024",
+                    "images" => ["water_tanks_donation1.jpg", "water_tanks_donation2.jpg", "water_tanks_donation3.jpg"]
+                ],
+                [
+                    "title" => "Donation of 2000 Student Handbooks",
+                    "text" => "TeCETEL donated 2000 copies of the Student Guide/Handbook to support students in navigating their academic journey.",
+                    "date" => "26th July, 2024",
+                    "images" => ["handbook_donation1.jpg"]
+                ],
+                [
+                    "title" => "Discussion on Digitalizing Teaching Practice Supervision",
+                    "text" => "TeCETEL hosted officials from NTI Kaduna to further discuss the digitalization of teaching practice supervision.",
+                    "date" => "24th September, 2024",
+                    "images" => ["ntidiscussion1.jpg", "ntidiscussion2.jpg", "ntidiscussion3.jpg"]
+                ],
+                [
+                    "title" => "Presentation on CHISQURES App for Research",
+                    "text" => "Dr. Hamidu Abdullahi from ABU Zaria made a presentation on the use of the CHISQURES app for research purposes at TeCETEL.",
+                    "date" => "30th September, 2024",
+                    "images" => ["chisqures_app1.jpg", "chisqures_app2.jpg", "chisqures_app3.jpg"]
+                ],
+                [
+                    "title" => "Visit by TETFund Headquarters Officials",
+                    "text" => "Officials from TETFund Headquarters Abuja visited TeCETEL to review the projects and activities undertaken by the center.",
+                    "date" => "10th October, 2024",
+                    "images" => ["tetfund_visit1.jpg", "tetfund_visit2.jpg", "tetfund_visit3.jpg"]
+                ],
+                [
+                    "title" => "ACEPHA Workshop in Collaboration with TeCETEL",
+                    "text" => "ACEPHA (BUK Kano) collaborated with TeCETEL for a 5-day workshop aimed at management staff of Centers of Excellence across universities, polytechnics, and colleges of education.",
+                    "date" => "14th October, 2024",
+                    "images" => ["acepha_workshop1.jpg", "acepha_workshop2.jpg", "acepha_workshop3.jpg"]
+                ]
+              ];
+    
+              foreach ($stories as $index => $story) {
+                echo '<div class="mySlides">';
+                echo '<h2>' . $story["title"] . '</h2>';
+                echo '<p class="date">' . $story["date"] . '</p>';  // Add the date
+                echo '<p>' . $story["text"] . '</p>';
+                
+                // Large image display area (default to first image)
+                echo '<div class="large-image">';
+                echo '<img id="largeImg' . $index . '" src="images/' . $story["images"][0] . '" alt="' . $story["title"] . '" class="big-img">';
+                echo '</div>';
+                
+                // Thumbnails
+                echo '<div class="thumbnails">';
+                foreach ($story["images"] as $imgIndex => $image) {
+                    echo '<img src="images/' . $image . '" class="thumb" onclick="changeImage(\'largeImg' . $index . '\', \'images/' . $image . '\')" alt="thumbnail">';
+                }
+                echo '</div>';
+                
+                echo '</div>';
+            }
+        ?>
+
+        <!-- Navigation buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+        let slideIndex = 0;
+        let slideInterval;
+    
+        // Function to change the large image based on thumbnail click
+        function changeImage(largeImageId, newSrc) {
+            document.getElementById(largeImageId).src = newSrc;
+            resetSlideInterval();  // Reset the interval when a thumbnail is clicked
+        }
+    
+        // Function to show slides
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("mySlides");
+    
+            // If the index exceeds the number of slides, go back to the first one
+            if (n >= slides.length) {
+                slideIndex = 0;
+            }
+    
+            // If the index is less than zero, go to the last slide
+            if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
+    
+            // Hide all slides initially
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+    
+            // Show the current slide
+            slides[slideIndex].style.display = "block";
+        }
+    
+        // Function to navigate slides manually
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides(slideIndex);
+            resetSlideInterval();  // Reset the interval on manual slide navigation
+        }
+    
+        // Start the slideshow interval
+        function startSlideInterval() {
+            slideInterval = setInterval(function() {
+                slideIndex++;
+                showSlides(slideIndex);
+            }, 5000);  // 10 seconds interval
+        }
+    
+        // Reset the slideshow interval
+        function resetSlideInterval() {
+            clearInterval(slideInterval);  // Clear the current interval
+            startSlideInterval();  // Start a new interval
+        }
+    
+        // Initialize the slideshow on page load
+        window.onload = function() {
+            showSlides(slideIndex);
+            startSlideInterval();  // Start the automated slideshow
+        };
+    </script>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Tetfund Centre of Excellence for Technology Enhanced Learning (TeCETEL) is domiciled in Federal College of Education, Zaria, Kaduna State-Nigeria.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Federal College of Education<br>P.M.B. 1041 Kongo, Zaria.</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>tecetel@fcezaria.edu.ng</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+234 803 6417 979</p>
+              </div>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3915.3837888058097!2d7.7299264!3d11.0847476!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11b283e78c8692c1%3A0xa8c94d9489a6074e!2sTeCETEL!5e0!3m2!1sen!2sng!4v1737528383565!5m2!1sen!2sng" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>TeCETEL</h3>
+            <p>
+              Federal College of Education<br>
+			  P.M.B. 1041 Kongo, <br>
+			  Zaria.<br><br>
+              <strong>Phone:</strong> +234 803 6417 979<br>
+              <strong>Email:</strong> tecetel@fcezaria.edu.ng<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tecetel.fcezaria.edu.ng">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tecetel.fcezaria.edu.ng/about">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tecetel.fcezaria.edu.ng/courses">Courses</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tecetel.fcezaria.edu.ng/ranking">Ranking</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tecetel.fcezaria.edu.ng/campuses">Campuses</a></li>
+            </ul>
+          </div>
+		  
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Sponsors</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/center-of-excellence/">Center of Excellence</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/annual-intervention/zonal-intervention/">High Impact Intervention</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/annual-intervention/zonal-intervention/">Zonal Intervention</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/annual-intervention/disaster-recovery/">Disaster Recovery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/annual-intervention/national-research-fund/">National Research Fund</a></li>
+            </ul>
+          </div>
+		  
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong>TeCETEL</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+       
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
